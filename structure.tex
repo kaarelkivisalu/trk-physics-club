@@ -7,16 +7,18 @@
 \usepackage{enumitem}% Listid 
 \usepackage[compact]{titlesec}% Kompaktsed pealkirjad  
 \usepackage{siunitx}% SI ühikud
+\usepackage{tikz}
+\usepackage[siunitx]{circuitikz}
 \usepackage[final]{microtype}
 \usepackage{amsmath}
 \geometry{
-	paper=a4paper, % Paper size, change to letterpaper for US letter size
-	top=0.5cm, % Top margin
-	bottom=1cm, % Bottom margin
-	left=0.5cm, % Left margin
-	right=0.5cm, % Right margin
-	foot=0.5cm, % Footer-margin distance
-	%showframe, % Uncomment to show how the type block is set on the page
+    paper=a4paper, % Paper size, change to letterpaper for US letter size
+    top=0.5cm, % Top margin
+    bottom=1cm, % Bottom margin
+    left=0.5cm, % Left margin
+    right=0.5cm, % Right margin
+    foot=0.5cm, % Footer-margin distance
+    %showframe, % Uncomment to show how the type block is set on the page
 }
 
 
@@ -35,31 +37,44 @@
 {\par \refstepcounter{myproblems} \textbf{Ülesanne \themyproblems .} \ignorespaces\IfValueT{#1}{\IfValueTF{#3}{\textbf{(#1)} \ignorespaces}{\IfNoValueT{#2}{\textbf{(#1)} \ignorespaces}}}} 
 {\IfValueT{#2}{\IfValueTF{#3}{\begin{figure}[h!]\includegraphics[width=#3]{#2.pdf}\centering\vspace{-1em}\end{figure}}{\begin{figure}[h!]\includegraphics[width=#2]{#1.pdf}\centering\vspace{-1em}\end{figure}}}\ignorespacesafterend}
 
-% Alaülesanded
-\newenvironment{subquestion}
-{\setlength{\parskip}{0pt}\begin{enumerate}[label=\alph*), nolistsep]}
-{\end{enumerate}\setlength{\parskip}{1em}\ignorespacesafterend}
+    % Alaülesanded
+    \newenvironment{subquestion}
+    {\setlength{\parskip}{0pt}\begin{enumerate}[label=\alph*), nolistsep]}
+    {\end{enumerate}\setlength{\parskip}{1em}\ignorespacesafterend}
 
-% Vihjete jaoks
-\newenvironment{hint}[1][Vihje]
-{\setlength{\parskip}{0em} \textit{#1}: \ignorespaces}
-{\setlength{\parskip}{1em}\ignorespacesafterend}
+    % Vihjete jaoks
+    \newenvironment{hint}[1][Vihje]
+    {\setlength{\parskip}{0em} \textit{#1}: \ignorespaces}
+    {\setlength{\parskip}{1em}\ignorespacesafterend}
 
-\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}% Primed vector
+    \newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}% Primed vector
 
-% Lahendused jaoks
-\usepackage{hyperref}
-\newenvironment{solutions}
-{\begin{enumerate}[label=\textbf{\arabic*.}, wide]}
-	{\end{enumerate}}
+    % Lahendused jaoks
+    \usepackage{hyperref}
+    \newenvironment{solutions}
+    {\begin{enumerate}[label=\textbf{\arabic*.}, wide]}
+    {\end{enumerate}}
 
-% Displaystyle valemite paigutus
-\makeatletter
-\g@addto@macro{\normalsize}{%
-	\setlength{\abovedisplayskip}{4pt}
-	\setlength{\abovedisplayshortskip}{4pt}
-	\setlength{\belowdisplayskip}{4pt}
-	\setlength{\belowdisplayshortskip}{4pt}}
-\makeatother
+    % Displaystyle valemite paigutus
+    \makeatletter
+    \g@addto@macro{\normalsize}{%
+        \setlength{\abovedisplayskip}{4pt}
+        \setlength{\abovedisplayshortskip}{4pt}
+        \setlength{\belowdisplayskip}{4pt}
+        \setlength{\belowdisplayshortskip}{4pt}}
+        \makeatother
 
-% \directlua{dofile("DetectUnderfull.lua")}
+        % \directlua{dofile("DetectUnderfull.lua")}
+        \tikzset{
+            odot/.style={
+                circle,
+                inner sep=0pt,
+                node contents={$\odot$},
+                scale=1
+            },
+            otimes/.style={
+                circle,
+                inner sep=0pt,
+                node contents={$\otimes$},
+                scale=1
+            }}
