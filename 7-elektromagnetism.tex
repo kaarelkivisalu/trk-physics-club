@@ -7,45 +7,42 @@
 {Kaarel Kivisalu \hfill 16. jaanuar 2019}
 
 
-
 \section{Elektrostaatika}
 \subsection{Elementaarteadmised}
 Kahe punktlaengu \( q_1 \) ja \( q_2 \) vahel mõjub elektrostaatiline jõud:
 \begin{equation*}
-\vec{F}_{1} = \dfrac{1}{4\pi\varepsilon_0 }\dfrac{q_1 q_2}{|\vec{r}_{21}|^2}\hat{r}_{21} \tag{Coulomb'i seadus},
+    \vec{F}_{1} = \dfrac{1}{4\pi\varepsilon_0 }\dfrac{q_1 q_2}{|\vec{r}_{21}|^2}\hat{r}_{21} \tag{Coulomb'i seadus},
 \end{equation*}
 kus \( \vec{r}_{21}=\vec{r}_2-\vec{r}_1 \) ja \( \varepsilon_0\approx\SI{8.854e-12}{\F\per\m} \).
 
 Võrrandi lineaarsuse tõttu kehtib ka \textit{superpositsiooniprintsiip}.
 
 Elektriväli \( \vec{E} \) on defineeritud valemiga \( \vec{F}=q\vec{E} \). Elektrivälja on mugav visualiseerida jõujoone mõiste kaudu. Elektrivälja \textit{jõujoonteks} nimetatakse kõveraid, millele elektriväli \( \vec{E} \) on igas punktis puutujaks. Jõujooned algavad positiivsetel ja lõpevad negatiivsetel laengutel. Kvantitatiivsedseosed on järgmised: punktlaengust lähtuvate jõujoonte arv on võrdeline selle laengu suurusega \( q \) ning jõujoonte tihedus (st jõujoontega risti asetatud ühikpinda läbivate jõujoonte arv) on võrdeline välja tugevusega \( \vec{E} \).
-
 \begin{question}
-	Neli identset punktlaengut suurusega \( q \) paiknevad ruudu tippudes, kus ruudu kuljepikkus on \( L \). Leidke laengutele mõjuva jõu suurus.
+    Neli identset punktlaengut suurusega \( q \) paiknevad ruudu tippudes, kus ruudu kuljepikkus on \( L \). Leidke laengutele mõjuva jõu suurus.
 \end{question}
 
 \begin{question}
-	Kella numbrilauale on fikseeritud punktlaengud suurusega \( q, 2q, 3q,..., 12q\ (q > 0) \), mis paiknevad vastavatel tunnijaotistel. Millist aega näitab tunniosuti hetkel, kui ta on paralleelne ja samasuunaline nende laengute poolt tekitatud resultantväljatugevuse vektoriga numbrilaua tsentris?
+    Kella numbrilauale on fikseeritud punktlaengud suurusega \( q, 2q, 3q,..., 12q\ (q > 0) \), mis paiknevad vastavatel tunnijaotistel. Millist aega näitab tunniosuti hetkel, kui ta on paralleelne ja samasuunaline nende laengute poolt tekitatud resultantväljatugevuse vektoriga numbrilaua tsentris?
 \end{question}
 
 \subsection{Gaussi seadus elektrivälja jaoks}
-Mingit suletud pinda läbiv elektrivälja voog on võrdeline pinna sees oleva laenguga: 
+Mingit suletud pinda läbiv elektrivälja voog on võrdeline pinna sees oleva laenguga:
 \begin{equation*}
-\oint_S\vec{E}\cdot d\vec{S}=\frac{q}{\varepsilon_0} \tag{I Maxwelli võrrand}.
+    \oint_S\vec{E}\cdot d\vec{S}=\frac{q}{\varepsilon_0} \tag{I Maxwelli võrrand}.
 \end{equation*}
-
 \begin{question}
-	Leidke Gaussi seaduse abil elektrivälja tugevus kaugusel $r$
-	\begin{subquestion}
-		\item punktlaengust laenguga \( q \);
-		\item ühtlaselt laetud lõputult pikast ja peenikesest traadist, mille laengu joontihedus on $\lambda$;
-		\item ühtlaselt laetud lõputust tasandist, mille laengu pindtihedus on $\sigma$;
-		\item ühtlaselt laetud kerast, mille raadius on $R$ ja laengu ruumtihedus on $\rho$.
-	\end{subquestion}
+    Leidke Gaussi seaduse abil elektrivälja tugevus kaugusel $r$
+    \begin{subquestion}
+    \item punktlaengust laenguga \( q \);
+    \item ühtlaselt laetud lõputult pikast ja peenikesest traadist, mille laengu joontihedus on $\lambda$;
+    \item ühtlaselt laetud lõputust tasandist, mille laengu pindtihedus on $\sigma$;
+    \item ühtlaselt laetud kerast, mille raadius on $R$ ja laengu ruumtihedus on $\rho$.
+    \end{subquestion}
 \end{question}
 
 \begin{question}
-	Leidke elektrivälja tugevus plaatkondensaatoris, kui plaatide laengu pindtihedus on $\pm\sigma$.
+    Leidke elektrivälja tugevus plaatkondensaatoris, kui plaatide laengu pindtihedus on $\pm\sigma$.
 \end{question}
 
 \subsection{Elektrostaatilise välja energia ja potentsiaal}
@@ -53,28 +50,28 @@ Elektrostaatiline väli on \textit{konservatiivne}: töö, mida väli teeb laetu
 \[ V=\varphi_B-\varphi_A=-\int_{A}^{B} \vec{E}\, d\vec{r}.\]
 Illustreerime öeldut punktlaengu baasil. Harilikult lepitakse kokku, et lõpmatuses on potentsiaal võrdne nulliga. Seega punktlaengu \( q \) elektrivälja potentsiaal kaugusel r avaldub järgmiselt:
 \begin{align*}
-\varphi(r)&=-\int_{\infty}^{r}\vec{E}\cdot d\vec{r}=\int_{r}^{\infty}{E}\, dr\\
-		  &=\dfrac{q}{4\pi\varepsilon_0}\int_{r}^{\infty}\dfrac{1}{r^2}\, dr=\dfrac{q}{4\pi\varepsilon_0 r}.
+    \varphi(r)&=-\int_{\infty}^{r}\vec{E}\cdot d\vec{r}=\int_{r}^{\infty}{E}\, dr\\
+    &=\dfrac{q}{4\pi\varepsilon_0}\int_{r}^{\infty}\dfrac{1}{r^2}\, dr=\dfrac{q}{4\pi\varepsilon_0 r}.
 \end{align*}
 
 \begin{question}
-	Ruumiosa \( 0 < x < d \) täidab ühtlaselt jaotunud elektrilaeng tihedusega \( \rho \ (\rho<0)\); laengutihedus ruumiosas \( −d < x < 0 \) on \( -\rho \). Piirkondades \( \infty < x < −d \) ning \( d < x < \infty \) laeng puudub. Piirkonnas \( x > d \) liigub elektron massiga \( m \) ja laenguga \( −e \), selle kiirusvektor on suunatud otse laetud kihi poole. Millise minimaalse algkiiruse puhul suudab elektron veel läbida laetud kihid?
+    Ruumiosa \( 0 < x < d \) täidab ühtlaselt jaotunud elektrilaeng tihedusega \( \rho \ (\rho<0)\); laengutihedus ruumiosas \( −d < x < 0 \) on \( -\rho \). Piirkondades \( \infty < x < −d \) ning \( d < x < \infty \) laeng puudub. Piirkonnas \( x > d \) liigub elektron massiga \( m \) ja laenguga \( −e \), selle kiirusvektor on suunatud otse laetud kihi poole. Millise minimaalse algkiiruse puhul suudab elektron veel läbida laetud kihid?
 \end{question}
 
 \begin{question}
-	\( N \) ühesugust elavhõbedatilka on laetud ühesuguse potentsiaalini \( \varphi_0 \). Missuguseks kujuneb suure elavhõbedatilga potentsiaal kõigi väikeste tilkade liitumisel (tilgad lugeda kerakujulisteks)?
+    \( N \) ühesugust elavhõbedatilka on laetud ühesuguse potentsiaalini \( \varphi_0 \). Missuguseks kujuneb suure elavhõbedatilga potentsiaal kõigi väikeste tilkade liitumisel (tilgad lugeda kerakujulisteks)?
 \end{question}
 
 \subsection{Juhid elektrostaatilises väljas}
-\textit{Juhiks} nimetatakse materjali, milles on vabu laengukandjaid. 
+\textit{Juhiks} nimetatakse materjali, milles on vabu laengukandjaid.
 \begin{question}
-	Põhjendage,
-	\begin{subquestion}
-		\item miks puudub juhi sees elektriväli;
-		\item miks liigub laenguga juhis laeng täielikult selle pinnale (ehk miks puudub juhi sees laeng);
-		\item miks puudub õõnsusega juhis laeng juhi sisepinnal;
-		\item miks on elektriväli igas punktis risti pinnaga ja milline on elektrivälja tugevus pinna vahetus läheduses, kui selles punktis on juhi laengu pindtihedus $\sigma$.
-	\end{subquestion}
+    Põhjendage,
+    \begin{subquestion}
+    \item miks puudub juhi sees elektriväli;
+    \item miks liigub laenguga juhis laeng täielikult selle pinnale (ehk miks puudub juhi sees laeng);
+    \item miks puudub õõnsusega juhis laeng juhi sisepinnal;
+    \item miks on elektriväli igas punktis risti pinnaga ja milline on elektrivälja tugevus pinna vahetus läheduses, kui selles punktis on juhi laengu pindtihedus $\sigma$.
+    \end{subquestion}
 \end{question}
 
 %\subsection{Dielektrikud elektrostaatilises väljas}
@@ -86,31 +83,31 @@ Illustreerime öeldut punktlaengu baasil. Harilikult lepitakse kokku, et lõpmat
 \subsection{Gaussi seadus magnetvälja jaoks}
 Mingit suletud pinda läbiv summaarne magnetvälja voog on null:
 \begin{equation*}
-\oint_S\vec{B}\cdot d\vec{S}=0 \tag{II Maxwelli võrrand}.
+    \oint_S\vec{B}\cdot d\vec{S}=0 \tag{II Maxwelli võrrand}.
 \end{equation*}
 
 \subsection{Ampere'i tsirkulatsiooniteoreem}
 
 Mingi suletud kontuuri $B$-välja \enquote{tsirkulatsioon} on võrdeline kontuuri läbiva koguvooluga. Suuna leidmiseks saab kasutada parema käe kruvireeglit.
 \begin{equation*}
-\oint_L\vec{B}\cdot d\vec{l}=\mu_0 I \tag{III Maxwelli võrrand}
+    \oint_L\vec{B}\cdot d\vec{l}=\mu_0 I \tag{III Maxwelli võrrand}
 \end{equation*}
 \begin{question}
-	Leidke magnetiline induktsioon kaugusel $r$ lõpmatult pikast sirgjoonelisest juhtmest, mille voolutugevus on $I$.
+    Leidke magnetiline induktsioon kaugusel $r$ lõpmatult pikast sirgjoonelisest juhtmest, mille voolutugevus on $I$.
 \end{question}
 
 \begin{question}
-	Leidke magnetiline induktsioon pika solenoidi ehk pooli sees, mida läbib voolutugevus $I$ ja mille keerdude arvtihedus (keerdude arv pikkusühiku kohta) on $n$.
+    Leidke magnetiline induktsioon pika solenoidi ehk pooli sees, mida läbib voolutugevus $I$ ja mille keerdude arvtihedus (keerdude arv pikkusühiku kohta) on $n$.
 \end{question}
 
 \subsection{Biot'-Savart' seadus}
 Vooluelemendil on magnetostaatikas samasugune roll nagu punktlaengul elektrostaatikas. Coulomb’i seaduse analoogiks võib lugeda \textit{Biot’-Savart’i seadust}, mille kohaselt vooluelement \( I\, d\vec{l} \) annab magnetinduktsiooni kaugusel \( r \) panuse
 \begin{equation}
-d\vec{B}=\dfrac{\mu_0 I}{4\pi}\dfrac{d\vec{l} \times \hat{r}}{r^2} \tag{Biot'-Savart' seadus}.
+    d\vec{B}=\dfrac{\mu_0 I}{4\pi}\dfrac{d\vec{l} \times \hat{r}}{r^2} \tag{Biot'-Savart' seadus}.
 \end{equation}
 
 \begin{question}
-	Leidke magnetiline induktsioon ringvoolu teljel kaugusel \( x \) ringvoolu tasandist. Voolutugevus kontuuris on \( I \) ja kontuuri raadius \( R \).
+    Leidke magnetiline induktsioon ringvoolu teljel kaugusel \( x \) ringvoolu tasandist. Voolutugevus kontuuris on \( I \) ja kontuuri raadius \( R \).
 \end{question}
 
 \section{Elektrodünaamika}
@@ -118,28 +115,41 @@ d\vec{B}=\dfrac{\mu_0 I}{4\pi}\dfrac{d\vec{l} \times \hat{r}}{r^2} \tag{Biot'-Sa
 Punktlaengule $q$ mõjub magnetväljas jõud $\vec{F}=q\vec{E}+q(\vec{v}\times \vec{B})$. Kui $\vec{E}=0$, \( \vec{B}=const \) ja on risti kiirusvektoriga, siis hakkab laeng liikuma mööda ringjoonelist trajektoori, kui $\vec{E}=0$ ja $\vec{B}=const$ omab ka mingit kiirusvektorisuunalist komponenti, hakkab laeng liikuma mööda spiraalset trajektoori.
 
 \begin{question}
-	Leidke punktlaengu $q$ trajektoori raadius kiirusvektoriga ristsuunalises magnetväljas, kui magnetiline induktsioon on $B$, laengu kiirus on $v$ ja mass on $m$.
+    Leidke punktlaengu $q$ trajektoori raadius kiirusvektoriga ristsuunalises magnetväljas, kui magnetiline induktsioon on $B$, laengu kiirus on $v$ ja mass on $m$.
 \end{question}
 
 \begin{question}[VKV 2018, P2]
-	Elektron, mis on kiirendatud elektronkahuris pingega $U_k$, liigub vaakumis ja siseneb tasaparalleelsete metallplaatide vahelisse ruumipiirkonda nii, et kiirusvektor on paralleelne plaatidega (vt joonis). Plaadid paiknevad üksteisest kaugusel $d$ ja on ühendatud alalispingeallika ($U$) erinevate poolustega. Samal ajal saab plaatide vahel tekitada ka homogeense magnetvälja, kus magnetilise induktsiooni vektor $\vec{B}$ on risti elektroni kiirusega ja paralleelne plaatidega. Kui suur peab olema $B$, et elektron liiguks suunda muutmata läbi kondensaatori? Elektroni mass on $m$ ja elementaarlaeng $e$.
+    Elektron, mis on kiirendatud elektronkahuris pingega $U$, liigub vaakumis ja siseneb tasaparalleelsete metallplaatide vahelisse ruumipiirkonda nii, et kiirusvektor on paralleelne plaatidega (vt joonis). Plaadid paiknevad üksteisest kaugusel $d$ ja on ühendatud alalispingeallika ($U$) erinevate poolustega. Samal ajal saab plaatide vahel tekitada ka homogeense magnetvälja, kus magnetilise induktsiooni vektor $\vec{B}$ on risti elektroni kiirusega ja paralleelne plaatidega. Kui suur peab olema $B$, et elektron liiguks suunda muutmata läbi kondensaatori? Elektroni mass on $m$ ja laeng on $q$.
 \end{question}
 
-\begin{question}[Piirk 2013, G10]
-	Laboris oli uurimiseks hulk mingit atomaarset ainet, mille molaarmassiks mõõdeti $\mu_1$. Ühekordselt ioniseeritud ainet (iga aatom oli kaotanud ühe elektroni) kiirendati elektriväljas potentsiaalide vahega $U$ ja suunati magnetvälja induktsiooniga $B$ (vaadake joonist). Magnetinduktsioon oli joonise tasandiga risti, ioonide algkiirus oli $y$-telje suunaline, magnetväli asus piirkonnas $y > 0$ ning aine sisenes magnetvälja punktis $(0, 0, 0)$. Täheldati, et väike kogus ainet langes $x$-teljel asuvale detektorile kauguse $d$ võrra kaugemal kohast, kuhu langes põhiosa ainest. Sellest järeldati, et aine hulgas oli väike osa isotoopi erineva molaarmassiga. Leidke selle isotoobi molaarmass $\mu_2$. Avogadro arv on $N_A$ ja elektroni laeng on $−e$.
+\begin{circuitikz}
+    \draw (0,2.5) to[battery,a=$U$] (0,0);
+    \draw (0,2.5) -- (3.25,2.5) -- (3.25,2.1);
+    \draw (0,0) -- (3.25,0) -- (3.25,0.4);
+    \draw [line width=3] (1.5,0.4)--(5,0.4);
+    \draw [line width=3] (1.5,2.1)--(5,2.1);
+    \node  at (4,1.7) {$\vec B \bigodot$};
+    \draw [<->, thick] (1.5, 0.45) -- node [left] {$d$} (1.5,2.05);
+    \draw [->, thick] (5.5,1)  -- (5.1,1);
+    \draw [fill] (5.7,1) circle [radius=1.5pt] node [above] {$q,m$};
+    \draw [dashed] (5,1) -- (1.7,1);
+\end{circuitikz}
+
+\begin{question}[Piirk 2013, G10][em2][4cm]
+    Laboris oli uurimiseks hulk mingit atomaarset ainet, mille molaarmassiks mõõdeti $\mu_1$. Ühekordselt ioniseeritud ainet (iga aatom oli kaotanud ühe elektroni) kiirendati elektriväljas potentsiaalide vahega $U$ ja suunati magnetvälja induktsiooniga $B$ (vaadake joonist). Magnetinduktsioon oli joonise tasandiga risti, ioonide algkiirus oli $y$-telje suunaline, magnetväli asus piirkonnas $y > 0$ ning aine sisenes magnetvälja punktis $(0, 0, 0)$. Täheldati, et väike kogus ainet langes $x$-teljel asuvale detektorile kauguse $d$ võrra kaugemal kohast, kuhu langes põhiosa ainest. Sellest järeldati, et aine hulgas oli väike osa isotoopi erineva molaarmassiga. Leidke selle isotoobi molaarmass $\mu_2$. Avogadro arv on $N_A$ ja elektroni laeng on $−e$.
 \end{question}
 
 \begin{question}[Piirk 2018, G10]
-	Vaatleme tsüklotroni -- teatud tüüpi osakestekiirendi toimimist. Tsüklotron koosneb silindrikujulisest piirkonnast raadiusega $R$, kus on homogeenne magnetväli tugevusega $B$ ning õhukesest ribakujulisest piirkonnast laiusega $d$, kus on homogeenne ribaga risti olev elektriväli tugevusega $E$. Elektrivälja suunda muudetakse perioodiliselt vastassuunaliseks nii, et osakeste igal riba läbimisel on elektrivälja suund osakeste kiirusvektoriga samasuunaline. Samuti on tsüklotroni ühes ääres osakeste tsüklotronist väljumiseks kitsas kanal. Alustagu osakesed liikumist tsüklotroni keskelt tühiselt väikse algkiirusega. Mitu täisringi $n$ teevad osakesed tsüklotronis enne väljumist? Osakeste laeng on $q$ ja mass $m$. Eeldada, et $n\gg 1$.
+    Vaatleme tsüklotroni -- teatud tüüpi osakestekiirendi toimimist. Tsüklotron koosneb silindrikujulisest piirkonnast raadiusega $R$, kus on homogeenne magnetväli tugevusega $B$ ning õhukesest ribakujulisest piirkonnast laiusega $d$, kus on homogeenne ribaga risti olev elektriväli tugevusega $E$. Elektrivälja suunda muudetakse perioodiliselt vastassuunaliseks nii, et osakeste igal riba läbimisel on elektrivälja suund osakeste kiirusvektoriga samasuunaline. Samuti on tsüklotroni ühes ääres osakeste tsüklotronist väljumiseks kitsas kanal. Alustagu osakesed liikumist tsüklotroni keskelt tühiselt väikse algkiirusega. Mitu täisringi $n$ teevad osakesed tsüklotronis enne väljumist? Osakeste laeng on $q$ ja mass $m$. Eeldada, et $n\gg 1$.
 \end{question}
 
-Lorentzi jõu abil saab tuletada ka juhtmelõigule pikkusega $L$ ja voolutugevusega $I$ mõjuva jõu 
+Lorentzi jõu abil saab tuletada ka juhtmelõigule pikkusega $L$ ja voolutugevusega $I$ mõjuva jõu
 \begin{equation}
-\vec{F}=L(\vec{I}\times \vec{B}) \tag{Ampere'i seadus}.
+    \vec{F}=L(\vec{I}\times \vec{B}) \tag{Ampere'i seadus}.
 \end{equation}
 
 \begin{question}
-	Leidke kahe lõpmata pika paralleelse sirgjuhtme vahel ühikulise pikkusega lõigu kohta mõjuv jõud, kui voolud juhtmetes on \( I_1 \) ja \( I_2 \) ning juhtmetevaheline kaugus on \( r \).
+    Leidke kahe lõpmata pika paralleelse sirgjuhtme vahel ühikulise pikkusega lõigu kohta mõjuv jõud, kui voolud juhtmetes on \( I_1 \) ja \( I_2 \) ning juhtmetevaheline kaugus on \( r \).
 \end{question}
 
 \subsection{Liikumine statsionaarses magnetväljas}
@@ -147,48 +157,48 @@ Lorentzi jõu abil saab tuletada ka juhtmelõigule pikkusega $L$ ja voolutugevus
 Magnetväljas hakkab juhtmes olevatele laengukandjatele mõjuma Lorentzi jõud, mis omakorda tekitab juhtmes voolu. Võib mõelda, et juhtmelõigu otstele tekib pinge ehk elektromotoorjõud.
 
 \begin{question}
-	Leidke magnetväljas $B$ sellega kiirusega $v$ risti liikuva juhtmelõigu (mille pikkus on $l$) otstele tekkiv pinge.
+    Leidke magnetväljas $B$ sellega kiirusega $v$ risti liikuva juhtmelõigu (mille pikkus on $l$) otstele tekkiv pinge.
 \end{question}
 
 Saadud tulemuse võib esitada kujul (mis kehtib ka üldkujul, kui juhtmelõik ei ole sirgjooneline)
 \[ \mathcal{E}=B \frac{dS}{dt}=\frac{d\Phi}{dt} \]
 
 \begin{question}[E-S 2011, P3]
-	Dielektrilisest materjalist silinder raadiusega $r$ kannab oma silindrilisel pinnal laengut pindtihedusega $\sigma$ ja pöörleb ümber oma pikitelje nurkkiirusega $\omega$.
-	\begin{subquestion}
-		\item Määrake magnetinduktsioon $B$ silindri sisemuses. \textit{Märkus: soovi korral võite kasutada avaldist solenoidaalse pooli induktiivsuse jaoks, $L = \mu_0 N^{2}S/l$, kus $r$ on pooli raadius, $l$ — pikkus $(l\gg r)$, $S$ — ristlõike pindala ja $N$ — keerdude arv.}
-		\item Radiaalne juhtiv traat ühendab silindri telge ja silindrilist pinda (ning pöörleb koos silindriga). Leidke traadi otste vahele tekkiv elektromotoorjõud (pinge) $\mathcal{E}$.
-		\item Oletagem, et silindri telge ja silindrilist pinda ühendav traat ei ole radiaalne, vaid omab suvalist kuju (siiski, ükski traadi osa ei ulatu silindri seest välja). Näidake, et $\mathcal{E}$ ei sõltu traadi kujust.
-	\end{subquestion}
+    Dielektrilisest materjalist silinder raadiusega $r$ kannab oma silindrilisel pinnal laengut pindtihedusega $\sigma$ ja pöörleb ümber oma pikitelje nurkkiirusega $\omega$.
+    \begin{subquestion}
+    \item Määrake magnetinduktsioon $B$ silindri sisemuses. \textit{Märkus: soovi korral võite kasutada avaldist solenoidaalse pooli induktiivsuse jaoks, $L = \mu_0 N^{2}S/l$, kus $r$ on pooli raadius, $l$ — pikkus $(l\gg r)$, $S$ — ristlõike pindala ja $N$ — keerdude arv.}
+    \item Radiaalne juhtiv traat ühendab silindri telge ja silindrilist pinda (ning pöörleb koos silindriga). Leidke traadi otste vahele tekkiv elektromotoorjõud (pinge) $\mathcal{E}$.
+    \item Oletagem, et silindri telge ja silindrilist pinda ühendav traat ei ole radiaalne, vaid omab suvalist kuju (siiski, ükski traadi osa ei ulatu silindri seest välja). Näidake, et $\mathcal{E}$ ei sõltu traadi kujust.
+    \end{subquestion}
 \end{question}
 
 \subsection{Faraday induktsiooniseadus}
 
-Mistahes kontuuri jaoks indutseerib muutuv magnetvoog kontuuris pööriselise elektrivälja. Kuigi kontuuris tekib selle tulemusena elektromotoorjõud, siis klassikalisest pingest (potentsiaalide vahest) selle juures rääkida ei saa. 
+Mistahes kontuuri jaoks indutseerib muutuv magnetvoog kontuuris pööriselise elektrivälja. Kuigi kontuuris tekib selle tulemusena elektromotoorjõud, siis klassikalisest pingest (potentsiaalide vahest) selle juures rääkida ei saa.
 \begin{equation}
-\oint_L \vec{E} \cdot d\vec{l} = \mathcal{E} = -\frac{d\Phi}{dt} \tag{IV Maxwelli võrrand},
+    \oint_L \vec{E} \cdot d\vec{l} = \mathcal{E} = -\frac{d\Phi}{dt} \tag{IV Maxwelli võrrand},
 \end{equation}
 kus $\Phi=BS$ on magnetvoog läbi kontuuri. See tähendab, et voolu saab indutseerida kahel viisil, kas muutes magnetvälja (siis $\mathcal{E}=-S\frac{dB}{dt}$) või muutes kontuuri kuju (siis $\mathcal{E}=-B\frac{dS}{dt}$). Miinusmärk tähistab seda, et indutseeritud voolu poolt tekitatud magnetväli üritab kompenseerida magnetvoo muutust (\textit{Lenzi reegel}).
 
 \begin{question}[Piirk 2011, G8]
-	Maa gravitatsiooniväljas (raskuskiirendusega $g$) vertikaalselt paiknevale juhtivale traadile kinnitati takisti (massiga $m$, takistusega $R$) nõndaviisi, et see võib piki traati vabalt libiseda. Teades, et magnetinduktsioon $B$ oli risti traadi tasandiga ja traadi harude vaheline kaugus oli $d$, leidke, millise lõppkiirusega hakkab takisti langema.
+    Maa gravitatsiooniväljas (raskuskiirendusega $g$) vertikaalselt paiknevale juhtivale traadile kinnitati takisti (massiga $m$, takistusega $R$) nõndaviisi, et see võib piki traati vabalt libiseda. Teades, et magnetinduktsioon $B$ oli risti traadi tasandiga ja traadi harude vaheline kaugus oli $d$, leidke, millise lõppkiirusega hakkab takisti langema.
 \end{question}
 
 Mõnikord võib vooluelemendis (tavaliselt on selleks pool) toimuda eneseinduktsioon, kus voolu muutumine elemendis tekitab pinge selle sama elemendi otstele (sarnaselt Lenzi reegilile üritab jällegi pinge tasakaalustada voolu muutust). Sellisel juhul $U=L\frac{dI}{dt}$, kus võrdetegurit $L$ nimetatakse \textit{induktiivsuseks}.
-	
+
 Avaldage pooli induktiivsus keerdude arvu $N$, ristlõikepindala $S$ ja pooli pikkuse $l$ kaudu.
 
 \begin{question}[Lõppv 2008, G10]
-	Libedale klaaspulgale on pehmest traadist tihedasti keritud solenoid pikkusega $l$, keerdude arvuga $N$ ja ristlõikepindalaga $S$. Selles hoitakse konstantset voolu tugevusega $I$. Millist jõudu $F$ oleks vaja rakendada pooli otstele südamiku sihis, et venitada seda pisutki pikemaks, kui kehtiks eeldus, et venitamisel suurenevad kõigi naaberkeerdude vahekaugused võrdselt. Võite lugeda, et klaasi magnetiline läbitavus $\mu = 1$.
+    Libedale klaaspulgale on pehmest traadist tihedasti keritud solenoid pikkusega $l$, keerdude arvuga $N$ ja ristlõikepindalaga $S$. Selles hoitakse konstantset voolu tugevusega $I$. Millist jõudu $F$ oleks vaja rakendada pooli otstele südamiku sihis, et venitada seda pisutki pikemaks, kui kehtiks eeldus, et venitamisel suurenevad kõigi naaberkeerdude vahekaugused võrdselt. Võite lugeda, et klaasi magnetiline läbitavus $\mu = 1$.
 \end{question}
 
 \begin{question}[E-S 2015, P9]
-	Tihedalt keritud jäik solenoidpool on osaliselt pistetud teise samasuguse sisse. Nad on ühendatud konstantse voolu allikaga, mis hoiab mõlemas voolu $I$; nad tekitavad magnetvälja samas suunas. Mõlemal solenoidil on $N$ keerdu, nende pikkus on $l$ ja ristlõikepindalad on $A_1$ ja $A_2$. Võib eeldada, et $A_1,A_2 \ll l^{2}$. Kasu võib olla teadmisest, et magnetinduktsioon ühe eraldivõetud solenoidi keskmes on $B = \mu_0 IN/l$, kus $\mu_0$ on vaakumi magnetiline läbitavus.
-	\begin{subquestion}
-		\item Solenoidide keskmed on teineteisest kaugusel $x < l$ piki nende ühist telge \( [A_1, A_2 \ll (x - l)^{2}, x^{2}] \). Leidke magnetvälja koguenergia $E_m$ selles süsteemis.
-		\item Leidke elektromotoorjõud $\mathcal{E}_1$ ja $\mathcal{E}_2$, mis genereeritakse poolidel, kui üht tõmmatakse välja kiirusega $v$.
-		\item Leidke jõud $F$, mida on vaja, et tõmmata üht pooli väljapoole.
-	\end{subquestion}
+    Tihedalt keritud jäik solenoidpool on osaliselt pistetud teise samasuguse sisse. Nad on ühendatud konstantse voolu allikaga, mis hoiab mõlemas voolu $I$; nad tekitavad magnetvälja samas suunas. Mõlemal solenoidil on $N$ keerdu, nende pikkus on $l$ ja ristlõikepindalad on $A_1$ ja $A_2$. Võib eeldada, et $A_1,A_2 \ll l^{2}$. Kasu võib olla teadmisest, et magnetinduktsioon ühe eraldivõetud solenoidi keskmes on $B = \mu_0 IN/l$, kus $\mu_0$ on vaakumi magnetiline läbitavus.
+    \begin{subquestion}
+    \item Solenoidide keskmed on teineteisest kaugusel $x < l$ piki nende ühist telge \( [A_1, A_2 \ll (x - l)^{2}, x^{2}] \). Leidke magnetvälja koguenergia $E_m$ selles süsteemis.
+    \item Leidke elektromotoorjõud $\mathcal{E}_1$ ja $\mathcal{E}_2$, mis genereeritakse poolidel, kui üht tõmmatakse välja kiirusega $v$.
+    \item Leidke jõud $F$, mida on vaja, et tõmmata üht pooli väljapoole.
+    \end{subquestion}
 \end{question}
 
 \end{document}
