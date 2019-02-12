@@ -4,8 +4,7 @@
 
 \begin{document}
 {\huge \textbf{Elektromagnetism}\hfill \normalsize{nr 7}} \\
-{Kaarel Kivisalu \hfill 16. jaanuar 2019}
-
+{Kaarel Kivisalu \hfill 13. veebruar 2019}
 
 \section{Elektrostaatika}
 \subsection{Elementaarteadmised}
@@ -50,16 +49,24 @@ Elektrostaatiline väli on \textit{konservatiivne}: töö, mida väli teeb laetu
 \[ V=\varphi_B-\varphi_A=-\int_{A}^{B} \vec{E}\, d\vec{r}.\]
 Illustreerime öeldut punktlaengu baasil. Harilikult lepitakse kokku, et lõpmatuses on potentsiaal võrdne nulliga. Seega punktlaengu \( q \) elektrivälja potentsiaal kaugusel r avaldub järgmiselt:
 \begin{align*}
-    \varphi(r)&=-\int_{\infty}^{r}\vec{E}\cdot d\vec{r}=\int_{r}^{\infty}{E}\, dr\\
-    &=\dfrac{q}{4\pi\varepsilon_0}\int_{r}^{\infty}\dfrac{1}{r^2}\, dr=\dfrac{q}{4\pi\varepsilon_0 r}.
+\varphi(r)&=-\int_{\infty}^{r}\vec{E}\cdot d\vec{r}=\int_{r}^{\infty}{E}\, dr\\
+&=\dfrac{q}{4\pi\varepsilon_0}\int_{r}^{\infty}\dfrac{1}{r^2}\, dr=\dfrac{q}{4\pi\varepsilon_0 r}.
 \end{align*}
 
 \begin{question}
-    Ruumiosa \( 0 < x < d \) täidab ühtlaselt jaotunud elektrilaeng tihedusega \( \rho \ (\rho<0)\); laengutihedus ruumiosas \( −d < x < 0 \) on \( -\rho \). Piirkondades \( \infty < x < −d \) ning \( d < x < \infty \) laeng puudub. Piirkonnas \( x > d \) liigub elektron massiga \( m \) ja laenguga \( −e \), selle kiirusvektor on suunatud otse laetud kihi poole. Millise minimaalse algkiiruse puhul suudab elektron veel läbida laetud kihid?
+Ruumiosa \( 0 < x < d \) täidab ühtlaselt jaotunud elektrilaeng tihedusega \( \rho \ (\rho<0)\); laengutihedus ruumiosas \( −d < x < 0 \) on \( -\rho \). Piirkondades \( \infty < x < −d \) ning \( d < x < \infty \) laeng puudub. Piirkonnas \( x > d \) liigub elektron massiga \( m \) ja laenguga \( −e \), selle kiirusvektor on suunatud otse laetud kihi poole. Millise minimaalse algkiiruse puhul suudab elektron veel läbida laetud kihid?
 \end{question}
 
 \begin{question}
-    \( N \) ühesugust elavhõbedatilka on laetud ühesuguse potentsiaalini \( \varphi_0 \). Missuguseks kujuneb suure elavhõbedatilga potentsiaal kõigi väikeste tilkade liitumisel (tilgad lugeda kerakujulisteks)?
+\( N \) ühesugust elavhõbedatilka on laetud ühesuguse potentsiaalini \( \varphi_0 \). Missuguseks kujuneb suure elavhõbedatilga potentsiaal kõigi väikeste tilkade liitumisel (tilgad lugeda kerakujulisteks)?
+\end{question}
+
+\begin{question}
+Näidake, et ühtlaselt laetud sfääri sisemuses on potentsiaal konstantne ja võrdne sfääri enese potentsiaaliga.
+\end{question}
+
+\begin{question}
+Näidake, et plaatkondensaatori mahtuvus (vaakumis) avaldub valemiga \(\varepsilon_0 S/d\), kus \(S\) on katete pindala ja \(d\) on katetevaheline kaugus. Oletades, et kondensaatori energia kandjaks on plaatide vahel olev elektriväli \(E\), näidake, et viimase energiatihedus on \(\varepsilon_0 E^2/2\).
 \end{question}
 
 \subsection{Juhid elektrostaatilises väljas}
@@ -110,6 +117,14 @@ Vooluelemendil on magnetostaatikas samasugune roll nagu punktlaengul elektrostaa
     Leidke magnetiline induktsioon ringvoolu teljel kaugusel \( x \) ringvoolu tasandist. Voolutugevus kontuuris on \( I \) ja kontuuri raadius \( R \).
 \end{question}
 
+\begin{question}[E-S 2015, P8]
+    Juhtivas rõngas raadiusega \(R\) voolab suur vool \(I\). Rõngas lebab paigal \(xy\)-tasandis, tema keskpunkt on \( (0,0,0) \). Vaatleja läheneb rõngale \(z\)-teljega paralleelselt kiirusega \(v\) ja mõõdab elektrivälja kaugusel \(r\) teljest. Eeldage, et \(v \ll c\) ja \(r \ll R\).
+    \begin{subquestion}
+    \item Leidke \(z\)-teljel magnetinduktsiooni suurus \(B(z)\) ja suund paigalseisvas taustsüsteemis.
+    \item Hinnake elektrivälja \(E(z,r)\) suurust ja suunda, mida mõõdab me vaatleja kaugusel \(z\) rõnga tasandist.
+    \end{subquestion}
+\end{question}
+
 \section{Elektrodünaamika}
 \subsection{Lorentzi jõud}
 Punktlaengule $q$ mõjub magnetväljas jõud $\vec{F}=q\vec{E}+q(\vec{v}\times \vec{B})$. Kui $\vec{E}=0$, \( \vec{B}=const \) ja on risti kiirusvektoriga, siis hakkab laeng liikuma mööda ringjoonelist trajektoori, kui $\vec{E}=0$ ja $\vec{B}=const$ omab ka mingit kiirusvektorisuunalist komponenti, hakkab laeng liikuma mööda spiraalset trajektoori.
@@ -119,21 +134,23 @@ Punktlaengule $q$ mõjub magnetväljas jõud $\vec{F}=q\vec{E}+q(\vec{v}\times \
 \end{question}
 
 \begin{question}[VKV 2018, P2]
-    Elektron, mis on kiirendatud elektronkahuris pingega $U$, liigub vaakumis ja siseneb tasaparalleelsete metallplaatide vahelisse ruumipiirkonda nii, et kiirusvektor on paralleelne plaatidega (vt joonis). Plaadid paiknevad üksteisest kaugusel $d$ ja on ühendatud alalispingeallika ($U$) erinevate poolustega. Samal ajal saab plaatide vahel tekitada ka homogeense magnetvälja, kus magnetilise induktsiooni vektor $\vec{B}$ on risti elektroni kiirusega ja paralleelne plaatidega. Kui suur peab olema $B$, et elektron liiguks suunda muutmata läbi kondensaatori? Elektroni mass on $m$ ja laeng on $q$.
+    Elektron, mis on kiirendatud elektronkahuris pingega $U$, liigub vaakumis ja siseneb tasaparalleelsete metallplaatide vahelisse ruumipiirkonda nii, et kiirusvektor on paralleelne plaatidega (vt joonis). Plaadid paiknevad üksteisest kaugusel $d$ ja on ühendatud alalispingeallika, mille pinge on \(U\), erinevate poolustega. Samal ajal saab plaatide vahel tekitada ka homogeense magnetvälja, kus magnetilise induktsiooni vektor $\vec{B}$ on risti elektroni kiirusega ja paralleelne plaatidega. Kui suur peab olema $B$, et elektron liiguks suunda muutmata läbi kondensaatori? Elektroni mass on $m$ ja laeng on $q$.
 \end{question}
-
-\begin{circuitikz}
-    \draw (0,2.5) to[battery,a=$U$] (0,0);
-    \draw (0,2.5) -- (3.25,2.5) -- (3.25,2.1);
-    \draw (0,0) -- (3.25,0) -- (3.25,0.4);
-    \draw [line width=3] (1.5,0.4)--(5,0.4);
-    \draw [line width=3] (1.5,2.1)--(5,2.1);
-    \node  at (4,1.7) {$\vec B \bigodot$};
-    \draw [<->, thick] (1.5, 0.45) -- node [left] {$d$} (1.5,2.05);
-    \draw [->, thick] (5.5,1)  -- (5.1,1);
-    \draw [fill] (5.7,1) circle [radius=1.5pt] node [above] {$q,m$};
-    \draw [dashed] (5,1) -- (1.7,1);
-\end{circuitikz}
+\begin{figure}[h!]
+    \centering
+    \begin{circuitikz}
+        \draw (0,2.5) to[battery,a=$U$] (0,0);
+        \draw (0,2.5) -- (3.25,2.5) -- (3.25,2.1);
+        \draw (0,0) -- (3.25,0) -- (3.25,0.4);
+        \draw [line width=3] (1.5,0.4)--(5,0.4);
+        \draw [line width=3] (1.5,2.1)--(5,2.1);
+        \node  at (4,1.7) {$\vec B \bigodot$};
+        \draw [<->, thick] (1.5, 0.45) -- node [left] {$d$} (1.5,2.05);
+        \draw [->, thick] (5.5,1)  -- (5.1,1);
+        \draw [fill] (5.7,1) circle [radius=1.5pt] node [above] {$q,m$};
+        \draw [dashed] (5,1) -- (1.7,1);
+    \end{circuitikz}
+\end{figure}
 
 \begin{question}[Piirk 2013, G10][em2][4cm]
     Laboris oli uurimiseks hulk mingit atomaarset ainet, mille molaarmassiks mõõdeti $\mu_1$. Ühekordselt ioniseeritud ainet (iga aatom oli kaotanud ühe elektroni) kiirendati elektriväljas potentsiaalide vahega $U$ ja suunati magnetvälja induktsiooniga $B$ (vaadake joonist). Magnetinduktsioon oli joonise tasandiga risti, ioonide algkiirus oli $y$-telje suunaline, magnetväli asus piirkonnas $y > 0$ ning aine sisenes magnetvälja punktis $(0, 0, 0)$. Täheldati, et väike kogus ainet langes $x$-teljel asuvale detektorile kauguse $d$ võrra kaugemal kohast, kuhu langes põhiosa ainest. Sellest järeldati, et aine hulgas oli väike osa isotoopi erineva molaarmassiga. Leidke selle isotoobi molaarmass $\mu_2$. Avogadro arv on $N_A$ ja elektroni laeng on $−e$.
@@ -180,16 +197,52 @@ Mistahes kontuuri jaoks indutseerib muutuv magnetvoog kontuuris pööriselise el
 \end{equation}
 kus $\Phi=BS$ on magnetvoog läbi kontuuri. See tähendab, et voolu saab indutseerida kahel viisil, kas muutes magnetvälja (siis $\mathcal{E}=-S\frac{dB}{dt}$) või muutes kontuuri kuju (siis $\mathcal{E}=-B\frac{dS}{dt}$). Miinusmärk tähistab seda, et indutseeritud voolu poolt tekitatud magnetväli üritab kompenseerida magnetvoo muutust (\textit{Lenzi reegel}).
 
-\begin{question}[Piirk 2011, G8]
+\begin{question}[Piirk 2011, G8][em3][3cm]
     Maa gravitatsiooniväljas (raskuskiirendusega $g$) vertikaalselt paiknevale juhtivale traadile kinnitati takisti (massiga $m$, takistusega $R$) nõndaviisi, et see võib piki traati vabalt libiseda. Teades, et magnetinduktsioon $B$ oli risti traadi tasandiga ja traadi harude vaheline kaugus oli $d$, leidke, millise lõppkiirusega hakkab takisti langema.
 \end{question}
 
 Mõnikord võib vooluelemendis (tavaliselt on selleks pool) toimuda eneseinduktsioon, kus voolu muutumine elemendis tekitab pinge selle sama elemendi otstele (sarnaselt Lenzi reegilile üritab jällegi pinge tasakaalustada voolu muutust). Sellisel juhul $U=L\frac{dI}{dt}$, kus võrdetegurit $L$ nimetatakse \textit{induktiivsuseks}.
 
-Avaldage pooli induktiivsus keerdude arvu $N$, ristlõikepindala $S$ ja pooli pikkuse $l$ kaudu.
+\begin{question}
+    Avaldage pooli induktiivsus keerdude arvu $N$, ristlõikepindala $S$ ja pooli pikkuse $l$ kaudu.
+\end{question}
+
+\begin{question}
+    Avaldage magnetvälja energiatihedus.
+    \begin{hint}
+        Kasutades induktiivsuse definitsiooni, leidke pooli energia.
+    \end{hint}
+\end{question}
 
 \begin{question}[Lõppv 2008, G10]
     Libedale klaaspulgale on pehmest traadist tihedasti keritud solenoid pikkusega $l$, keerdude arvuga $N$ ja ristlõikepindalaga $S$. Selles hoitakse konstantset voolu tugevusega $I$. Millist jõudu $F$ oleks vaja rakendada pooli otstele südamiku sihis, et venitada seda pisutki pikemaks, kui kehtiks eeldus, et venitamisel suurenevad kõigi naaberkeerdude vahekaugused võrdselt. Võite lugeda, et klaasi magnetiline läbitavus $\mu = 1$.
+\end{question}
+
+\section{Ülesandeid}
+
+\begin{question}[Lahtine 2016, V10]
+    Kaks metallkuulikest raadiusega $R$ on ühendatud peenikese metalltraadi abil ja asuvad homogeenses elektriväljas tugevusega $E$. Metalltraadi pikkus on $l$, kusjuures $l \gg R$. Süsteem on tasakaalus. Leidke mehaaniline pinge $T$ traadis.
+\end{question}
+
+\begin{question}[E-S 2010, P1]
+    Kaks osakest (punane ja sinine) omavad mass m ning on ühendatud vedru abil, mille pikkus on $L$ ja jäikus $k$; sinine kannab laengut $q (q > 0)$, kuid punane on laenguta. Ruumipiirkonnas $x > 0$ on homogeenne $x$-teljega antiparalleelne elektriväli tugevusega $E$; piirkonnas $x < 0$ elektriväli puudub. Alguses liigub laengutest \enquote{hantel} ruumipiirkonnas $x < 0$ kiirusega $v$ paralleelselt $x$-teljega, kusjuures hantli telg on samuti $x$-teljega paralleelne ja vedru on pingevabas olekus. On teada, et laengute süsteem liigub mõne aja möödudes ruumipiirkonnas $x < 0$ kiirusega $−v$ (st antiparalleelselt $x$-teljega) ning et punane osake ei sisene kunagi piirkondax $x > 0$. Peale selle, vedru pikkus saavutab oma miinimumväärtuse vaid ühel korral.
+    \begin{subquestion}
+    \item Millise ajavahemiku \(\tau\) vältel viibib sinine osake piirkonnas $x > 0$?  Selleks, et protsess saaks toimuda täpselt nii nagu kirjeldatud, peab suuruste $m$, $v$, $k$, $q$, $E$ ja $L$ jaoks olema rahuldatud üks võrdus ja üks võrratus.
+    \item Milline võrdus peab kehtima?
+    \item Milline võrratus peab kehtima?
+    \end{subquestion}
+\end{question}
+
+\begin{question}[Piirk 2012, G10]
+    Ühtlaselt laetud koonus kõrgusega $H$ tekitab oma tipus $S$ potentsiaali \(\varphi_0\). Sellest lõigatakse ära väiksem koonus kõrgusega $h$, mis on suure koonusega sarnane, kahe koonuste tipud ühtivad. Seejärel eemaldatakse väiksem koonus lõpmatusesse. Milline on uus potentsiaali väärtus punktis $S$?
+\end{question}
+
+\begin{question}[Lõppv 2017, G10]
+    Ruumipiirkonnas $x > −a (a > 0)$ on homogeenne $z$-telje sihiline magnetväli induktsiooniga $B$. Koordinaatide alguspunktis on elektronide allikas, mis kiirgab elektrone võrdsel arvul kõikidesse suundadesse (üle ruuminurga \(4\pi\)). Kõikide elektronide kiirus on $v$. Tasandis $x = −a$ on ekraan. Kui elektronid laenguga $e$ ja massiga $m$ põrkuvad vastu ekraani, siis on kokkupõrkepunktis näha helendust. Leidke helenduva laigu $y$-telje sihiline läbimõõt tasandil $z = 0$ eeldusel, et vähemalt osa elektronidest jõuavad ekraanini. Samal tasandil leida, kus kohas on laigu helenduse intensiivsus kõige suurem. Milline on selle laigu $z$-telje sihiline pikkus tasandil $y = 0$?
+\end{question}
+
+\begin{question}[Lõppv 2018, G10]
+    Kaks ühesugust metallkuuli raadiusega $R$ ja massiga $m$ on ühendatud peenikese terastraadiga pikkusega $L \gg R$.  Piirkonnas $x \ge 0$ on elektriväli tugevusega $E$, mis on suunatud piki $x$-telge; piirkonnas $x < 0$ elektriväli puudub. Alghetkel on kuulid paigal ja üksteisest kaugusel $L$ nii et traat on pingul ning paralleelne $x$-teljega; ühe kuuli keskpunkt asub punktis $x = R$ ning teine kuul on piirkonnas $x < 0$. Visandage kvalitatiivselt kuulide kiiruse graafik sõltvuses ajast (kvantitatiivset ajaskaalat ei ole vaja) ning leidke nende kiirus punkti $x = 2L$ läbimisel. Terastraadi mahtuvus lugeda tühiselt väikeseks.
 \end{question}
 
 \begin{question}[E-S 2015, P9]
@@ -199,6 +252,33 @@ Avaldage pooli induktiivsus keerdude arvu $N$, ristlõikepindala $S$ ja pooli pi
     \item Leidke elektromotoorjõud $\mathcal{E}_1$ ja $\mathcal{E}_2$, mis genereeritakse poolidel, kui üht tõmmatakse välja kiirusega $v$.
     \item Leidke jõud $F$, mida on vaja, et tõmmata üht pooli väljapoole.
     \end{subquestion}
+\end{question}
+
+\begin{question}[E-S 2012, P7][em4][1.6cm]
+    Vaadelgem vabalt deformeeritavat isolatsiooniga elektrijuhet pikkusega \(2l\), mille mõlemad otsad on kinnitatud lähestikku lakke, vt joonist. Koormis massiga \(m\) on kinnitatud traadi keskpunkti külge (traadi mass on tühine). Süsteem asub horisontaalses homogeenses magnetväljas induktsiooniga \(B\); vabalangemise kiirendus on \(g\). Traadist lastakse läbi vool \(I\).
+    \begin{subquestion}
+    \item Visandage traadi kuju.
+    \item Millise maksimaalse vahemaa võrra saab sellisel viisil koormist kergitada (suurendades vajadusel voolutugevust)?
+    \item Kirjutage võrrand, millest on võimalik leida koormise kerkimiskõrgus \(\Delta h\).
+    \item Milline voolutugevus \(I_0\) on vajalik selleks, et kergitada koormist vahemaa \(\Delta h_0=l\left(1-\frac{1}{3}\right)\) võrra?
+    \end{subquestion}
+\end{question}
+\vspace{1em}
+
+\begin{question}[E-S 2010, P6]
+    Ruumipiirkonnas $x > 0$ on homogeenne $z$-teljega paralleelne magnetväli induktsiooniga $B$; piirkonnas $x < 0$ magnetväli puudub. Kaks ühesugust osakest massiga $m$ ja laenguga $q$ asuvad algselt punktides koordinaatidega $y = z = 0$ ning vastavalt $x = −L_0$ ja $x = −2L_0$. Kummagi osaksese algkiirus on $v$, piki $x$-telge magnetvälja suunas. Laengutevahelise elektrostaatilise tõukejõuga mitte arvestada.
+    \begin{subquestion}
+    \item Visandage esimese osakese trajektoor ja selle $y$-koordinaadi graaik sõltuvusena ajast.
+    \item Visandage laengute vahekauguse $L$ graafik sõltuvusena ajast eeldusel, et \(\pi m v /Bq>L\). Milline on osakeste minimaalne vahekaugus $L_{min}$?
+    \end{subquestion}
+\end{question}
+
+\begin{question}[PhysCup 2017, P1]
+    Hinnake suurusjärgu täpsusega punktlaengu \(q\) ja ringikujulise metallketta raadiusega \(r\), kui punktlaeg paikneb ketta teljel ja ketta ja punktlaengu vaheline kaugus on \(L \gg r\), interaktsioonijõudu. Ketta summaarne laeng on \num{0} ja paksus on tühiselt väike.
+\end{question}
+
+\begin{question}[EuPhO 2018, T2][em5][1.7cm]
+    Solenoid pikkusega \(l=\SI{20}{cm}\) on keritud ümber vertikaalse silindrilise katseklaasi, mis on tehtud klaasist ja täidetud veega. Solenoid on soojuslikult isoleeritud veest. Veesamba kõrgus on umbes \SI{20}{cm} võrra suurem solenoidi ülemise osa kõrgusest, katseklaasi diameeter on \SI{1}{cm}, mähise keerdude arv on \(N=\si{6000}\). Atmosfääri rõhk on \(p_0=\SI{101}{\kPa}\), vee temperatuur on \SI{293}{\K}. Vee magnetiline vastuvõtlikkus on \(\chi \equiv \mu_r - 1 = -\num{9.04e-6}\). Vaakumi magnetiline läbitavus \(\mu_0=\SI{12.57e-7}{\H\per\m}\). Voolu solenoidis suurendatakse aeglaselt kuni vesi mähises hakkab keema. Millisel voolutugevusel see juhtub? Vajadusel tee mõistlikke lihtsustusi. Vajalik voolutugevus võib olla mõnevõrra liiga suur tänapäevase tehnoloogia jaoks.
 \end{question}
 
 \end{document}

@@ -7,7 +7,7 @@
 {Kaarel Kivisalu \hfill 28. november 2018}
 
 \section{Soojus ja temperatuur}
-\textit{Termodünaamika I seadus}: suletud süsteemi koguenergia säilib, 
+\textit{Termodünaamika I seadus}: suletud süsteemi koguenergia säilib,
 \[ \Delta U=\Delta Q-\Delta W\]
 kus \( \Delta U \) süsteemi siseenergia muut, \( \Delta Q \) on süsteemile antud
 soojushulk, \( \Delta W \approx p\Delta V \) (\( dW=p\,dV \)) on süsteemi poolt ruumala muutmisel tehtav töö, \( p \) on gaasi rõhk ning \( \Delta V \) on ruumala muutus.
@@ -51,17 +51,17 @@ Kui keha soojendatakse konstantsel ruumalal, siis paisumistööd ei tehta. TDIS 
 \section{Molekulaarkineetiline teooria}
 Heaks mudeliks, mis kirjeldab reaalsust üsna tõetruult, on \textit{ideaalse gaasi mudel}. Ideaalse gaasi puhul loetakse, et molekulid on nagu tühiselt väikeste mõõtmetega absoluutselt elastsed kuulikesed (või vedrude abil ühendatud kuulikeste süsteemid), mis liiguvad juhuslikult, vastu seinu ja üksteist põrgates; molekulid mõjutavad üksteist vaid siis, kui nad on vahetus kontaktis ning nendevaheline kaugmõju (nt elektrostaatiline) puudub.
 
-Leiame rõhu avaldise. Eeldame, et kõigi molekulide kiirus \( x \)-teljes on \( v_x \) ning \( x \)-teljega risti on sein. Rõhk on jõud pindalaühiku kohta, \( p=F/A \); jõud on seinale ajaühikus üle antud impulss, \( F=2Nmv_x/t \), kus \( N \) on aja \( t \) jooksul seinaga põrkuvate molekulide arv. Kordaja 2 tuleb sellest, et molekulide seinast eemaldumise keskmine kiirus pärast põrget on sama suur kui lähenemise kiirus. Aja \( t \) jooksul jõuavad seinani need molekulid, mis on seinaäärses kihis paksusega \( v_x t \) ja liiguvad seina poole. Selle kihi ruumala on \( V=Av_xt \) ja molekulide arv on \( N=\frac{1}{2}nV = \frac{1}{2}nAv_xt \) (kordaja \( \frac{1}{2} \) tuleb sellest, et ainult pooled molekulid liiguvad seina poole). Järelikult on jõud \( F=2Nmv_x/t=nmv_{x}^2A \). 
+Leiame rõhu avaldise. Eeldame, et kõigi molekulide kiirus \( x \)-teljes on \( v_x \) ning \( x \)-teljega risti on sein. Rõhk on jõud pindalaühiku kohta, \( p=F/A \); jõud on seinale ajaühikus üle antud impulss, \( F=2Nmv_x/t \), kus \( N \) on aja \( t \) jooksul seinaga põrkuvate molekulide arv. Kordaja 2 tuleb sellest, et molekulide seinast eemaldumise keskmine kiirus pärast põrget on sama suur kui lähenemise kiirus. Aja \( t \) jooksul jõuavad seinani need molekulid, mis on seinaäärses kihis paksusega \( v_x t \) ja liiguvad seina poole. Selle kihi ruumala on \( V=Av_xt \) ja molekulide arv on \( N=\frac{1}{2}nV = \frac{1}{2}nAv_xt \) (kordaja \( \frac{1}{2} \) tuleb sellest, et ainult pooled molekulid liiguvad seina poole). Järelikult on jõud \( F=2Nmv_x/t=nmv_{x}^2A \).
 
-Reaalsuses on molekulide kiirused erinevad ja tuleb vastust keskmistada: \( F=nm\langle v_{x}^2 \rangle A \). Saame, et rõhk, \( p=F/A \), on \( p=nm\langle v_{x}^2 \rangle. \) Kui molekulide kogukiirus on \( v \), siis kehtib avaldis \( v^2=v_x^2+v_y^2+v_z^2 \), järelikult \( \langle v^2 \rangle = 3 \langle v_x^2 \rangle \). 
+Reaalsuses on molekulide kiirused erinevad ja tuleb vastust keskmistada: \( F=nm\langle v_{x}^2 \rangle A \). Saame, et rõhk, \( p=F/A \), on \( p=nm\langle v_{x}^2 \rangle. \) Kui molekulide kogukiirus on \( v \), siis kehtib avaldis \( v^2=v_x^2+v_y^2+v_z^2 \), järelikult \( \langle v^2 \rangle = 3 \langle v_x^2 \rangle \).
 
-Maxwelli jaotust kasutades vaame avaldada keskmise kiiruse integraalina: \( \langle v_x^2 \rangle = \int v_x^2 f(v_x) \, dv_x =k_B T/m \). Asendades selle rõhu võrrandisse saame, et \( p=nm\langle v_{x}^2 \rangle=nk_B T. \) 
+Maxwelli jaotust kasutades vaame avaldada keskmise kiiruse integraalina: \( \langle v_x^2 \rangle = \int v_x^2 f(v_x) \, dv_x =k_B T/m \). Asendades selle rõhu võrrandisse saame, et \( p=nm\langle v_{x}^2 \rangle=nk_B T. \)
 
 Asendades \( n=N/V=\frac{m}{\mu}N_A/V \) (\( N_A \) on Avogadro arv, \( \mu \) on gaasi molaarmass, \( m \) on gaasi kogumass, \( V \) on gaasi ruumala) saame, et \( pV=\frac{m}{\mu}N_A k_B T \equiv \frac{m}{\mu}RT \), kus \( R \) on universaalne gaasikonstant. Seda seadust tuntakse \textit{ideaalse gaasi olekuvõrrandina.} Mõnikord on see valem mugav esitada ka gaasi tiheduse \( \rho \) abil: \( p\mu=\rho RT \).
 
-Ideaalse gaasi puhul kehtib olekuvõrrand 
-\[ pV=\nu RT, \] 
-mille ekvivalentsed kuhud on 
+Ideaalse gaasi puhul kehtib olekuvõrrand
+\[ pV=\nu RT, \]
+mille ekvivalentsed kuhud on
 \[ p=n k_B T \ \textrm{ja}\ p\mu=\rho RT. \]
 
 \begin{question}
@@ -73,7 +73,7 @@ mille ekvivalentsed kuhud on
 
 Üheaatomilise gaasi siseenergia \( U \) (st molekulide soojusliikumise energia) arvutamiseks võime kasutada eespoolsaadud tulemust \( m\langle v^2_x\rangle = kT \). Tõepoolest, üheaatomilise molekuli mõõtmed on nii väikesed, et normaaltingimustel ta ei saa pöörelda. Seega on koguenergia molekulide arvu ja üksiku molekuli kineetilise energia keskväärtuse korrutis: \( U=N\frac{m}{2} (\langle v^2_x\rangle + \langle v^2_y\rangle + \langle v^2_z\rangle).\) Kõikide suundade võrdväärsuse tõttu \( \langle v^2_x\rangle = \langle v^2_y\rangle = \langle v^2_z\rangle \); arvestades, et \( N=\nu N_A \) ja \( N_A k_B=R \), saame lõpptulemuse
 \[ U=\frac{3}{2} \nu RT.\]
-Kahe- ja enama-aatomiliste molekulide puhul tuleb kulgliikumise energiale liita veel pöördliikumise energia \( U_p =\frac{1}{2} N(I_x\omega_x^2 + I_y\omega_y^2 + I_z\omega_z^2)=\frac{3}{2} \nu RT \), kus \( I_x \), \( I_y \) ja \( I_z \) tähistavad inertsimomente erinevate telgede ümber pöörlemisel ning \( \omega_x \), \( \omega_y \) ja \( \omega_z \) vastavaid nurkkiirusi. Siiski, nii nagu ühe-aatomiline molekul ei saa üldse pöörelda, ei saa ka kahe-aatomiline (ja enama-aatomiline, kuid lineaarne) molekul pöörelda ümber kahte aatomit ühendava telje. Seetõttu jääb sellistel molekulidel üks liidetav (kolmest) ära ning \( U_p=\nu RT .\) 
+Kahe- ja enama-aatomiliste molekulide puhul tuleb kulgliikumise energiale liita veel pöördliikumise energia \( U_p =\frac{1}{2} N(I_x\omega_x^2 + I_y\omega_y^2 + I_z\omega_z^2)=\frac{3}{2} \nu RT \), kus \( I_x \), \( I_y \) ja \( I_z \) tähistavad inertsimomente erinevate telgede ümber pöörlemisel ning \( \omega_x \), \( \omega_y \) ja \( \omega_z \) vastavaid nurkkiirusi. Siiski, nii nagu ühe-aatomiline molekul ei saa üldse pöörelda, ei saa ka kahe-aatomiline (ja enama-aatomiline, kuid lineaarne) molekul pöörelda ümber kahte aatomit ühendava telje. Seetõttu jääb sellistel molekulidel üks liidetav (kolmest) ära ning \( U_p=\nu RT .\)
 
 Paneme tähele, et iga nn vabadusaste (liikumine \( x \)-telje suunas, pöörlemine \( x \)-telje ümber, liikumine \( y \)-telje sihis jne) annab ühesuguse panuse siseenergiasse, \( \frac{1}{2}\nu RT \) (või kui rääkida üksiku molekuli keskmisest energiast, siis \( \frac{1}{2}kT \)). Seetõttu on mugav kasutada vabadusastmete arvu \( i \) gaasi molekulide iseloomustamiseks ning kirjutada siseenergia avaldis kujul
 \[ U=\frac{i}{2} \nu RT.\]
@@ -97,11 +97,11 @@ nii kiire, et soojusvahetust ei toimu, aga nii aeglane, et tema kulgemise karakt
 Gaaside puhul tähendab seda, et ei eraldu ega neeldu soojust: \( \Delta Q=0 \).
 
 Olümpiaadidel pole üldjuhul vaja adiabaadi seaduse tuletust teada, piisab adabaadi seaduse teadmisest. Rakendame TDIS ideaalse gaasiga toimuvale adiabaatilisele protsessile: \( dU=-p\, dV \), kus \( dU=C_V \, dT \), st \[ C_V  \, dT=-p\, dV .\]
-Tahame leida rõhu ja ruumala vahelist seost, seega on vaja elimineerida temperatuur. Selleks kasutame ideaalse gaasi seadust \( \nu RT=pV \), järelikult \( \nu R\,dT=p\, dV+V\, dp. \) Kombineerides võrrandeid saame \( p\,dV(c_V+R)+c_V V\, dp=0. \) Märkame, et \( c_V+R=c_p \), ja toome sisse adabaadinäitaja mõiste, 
+Tahame leida rõhu ja ruumala vahelist seost, seega on vaja elimineerida temperatuur. Selleks kasutame ideaalse gaasi seadust \( \nu RT=pV \), järelikult \( \nu R\,dT=p\, dV+V\, dp. \) Kombineerides võrrandeid saame \( p\,dV(c_V+R)+c_V V\, dp=0. \) Märkame, et \( c_V+R=c_p \), ja toome sisse adabaadinäitaja mõiste,
 \[ \gamma=c_p/c_V. \]
 Selle abil saame viimase võrrandi ümber kirjutada kujul
 \[ \gamma \frac{dV}{V}+\frac{dp}{p}=0. \]
-Kui me integreerime seda võrrandit, siis esimene liige on \( \int \gamma \frac{dV}{V}=\gamma \ln V=\ln V^\gamma \), ja teine liige on \( \int \frac{dp}{p}=\ln p \), seega \( \ln V^\gamma +\ln p=\ln pV^\gamma=Const \) ja järelikult ka 
+Kui me integreerime seda võrrandit, siis esimene liige on \( \int \gamma \frac{dV}{V}=\gamma \ln V=\ln V^\gamma \), ja teine liige on \( \int \frac{dp}{p}=\ln p \), seega \( \ln V^\gamma +\ln p=\ln pV^\gamma=Const \) ja järelikult ka
 \[ pV^\gamma=Const. \]
 Harilikult on õhumassid atmosfääris tugevas liikumises, nii et nad liiguvad pidevalt üles-alla. Et kõrgemal on rõhk väiksem, kui all, siis jahtub gaas üles liikudes heas lähenduses adiabaatilise paisumise tõttu (õhumasside suurte mõõtmete tõttu on
 soojusjuhtivus hästi aeglane).
@@ -129,7 +129,7 @@ soojusjuhtivus hästi aeglane).
 	\end{hint}
 \end{question}
 
-Statsionaarsete gaasivoolude kohta käivates ülesannetes saab kasutada kahte jäävusseadust. 
+Statsionaarsete gaasivoolude kohta käivates ülesannetes saab kasutada kahte jäävusseadust.
 
 Esiteks, mööda voolujooni
 \[ \frac{v^2}{2}+gh+c_pT=Const, \]
@@ -165,14 +165,14 @@ Kehtib Daltoni seadus, mis väidab, et gaaside segu rõhk on osarõhkude summa: 
 
 Kahe vedeliku piirpinnal algab keemine märksa madalamal temperatuuril, kui kummaski vedelikus eraldi. Keemine hakkab tingimusel kui küllastunud auru rõhk on suurem atmosfääri rõhust: \( p_s(T)>p_{atm} \). Kahe vedeliku piirpinnal kehtib keemise jaoks tingimus \( p_{1s}+p_{2s}>p_{atm} \).
 \begin{question}
-	Vaakumis ja kaalutus olekus, silindrilise anuma põhjas asub kiht tahket ainet. See sublimeerub (aurustub tahkest faasist gaasilisse) aeglaselt ja lükkab selle käigus anumat vastassuunas. Anuma mass on \( M \) ja aine algne mass \( m \ll M \). Anuma ristlõike pindala on \( A \) ja küllasutunud auru rõhk temperatuuril \( T \) on \( p_0 \). Milline on anuma kiirendus, kui 
+	Vaakumis ja kaalutus olekus, silindrilise anuma põhjas asub kiht tahket ainet. See sublimeerub (aurustub tahkest faasist gaasilisse) aeglaselt ja lükkab selle käigus anumat vastassuunas. Anuma mass on \( M \) ja aine algne mass \( m \ll M \). Anuma ristlõike pindala on \( A \) ja küllasutunud auru rõhk temperatuuril \( T \) on \( p_0 \). Milline on anuma kiirendus, kui
 	\begin{subquestion}
 		\item molekulide keskmine vaba tee pikkus \( \lambda \) küllastunud aururõhul on palju väiksem anuma pikkusest;
 		\item palju suurem sellest.
 	\end{subquestion}
 \end{question}
 \begin{question}[ter3][8 cm]
-	Geisreid võib vaadelda kui suuri maa-aluseid reservuaare, mis on täidetud põhjaveega ja mida kuumutavad reservuaari kuumad seinad. Reservuaar on ühendatud maapinnaga kitsa ja sügava kanali abil, mis on geisri puhkeolekus täidetud peaaegu servani veega. Lugeda, et geiser hakkab purskama siis, kui vesi reservuaaris läheb keema; puhkeperioodi jooksul vesi maapinnale viivas kanalis ei kuumene; purske ajal on kanal täidetud ainult veeauruga; reservuaari sees seguneb vesi hästi, nii et vee temperatuur on seal kõikjal enam-vähem üks ja sama; reservuaari maht on hulga suurem kanali mahust; põhjavee juurdevool läbi reservuaari seinte on piisavalt kiire, et täita pursete vahelise aja jooksul reservuaar ja kanal kuni kanali ülemise servani. Olgu maapinnale viiva kanali otste kõrguste vahe \( h = \SI{90}{\m} \). Vee aurustumissoojus \( \lambda = \SI{2,26e6}{\J\per\kg}\) ja tema erisoojus \( c = \SI{4,2e3}{\J\per\kg\per\K} \). Vee küllastunud auru rõhu sõltuvus temperatuurist on toodud graafikul. Leidke, millise osa oma veest kaotab reservuaar purske jooksul. 
+	Geisreid võib vaadelda kui suuri maa-aluseid reservuaare, mis on täidetud põhjaveega ja mida kuumutavad reservuaari kuumad seinad. Reservuaar on ühendatud maapinnaga kitsa ja sügava kanali abil, mis on geisri puhkeolekus täidetud peaaegu servani veega. Lugeda, et geiser hakkab purskama siis, kui vesi reservuaaris läheb keema; puhkeperioodi jooksul vesi maapinnale viivas kanalis ei kuumene; purske ajal on kanal täidetud ainult veeauruga; reservuaari sees seguneb vesi hästi, nii et vee temperatuur on seal kõikjal enam-vähem üks ja sama; reservuaari maht on hulga suurem kanali mahust; põhjavee juurdevool läbi reservuaari seinte on piisavalt kiire, et täita pursete vahelise aja jooksul reservuaar ja kanal kuni kanali ülemise servani. Olgu maapinnale viiva kanali otste kõrguste vahe \( h = \SI{90}{\m} \). Vee aurustumissoojus \( \lambda = \SI{2,26e6}{\J\per\kg}\) ja tema erisoojus \( c = \SI{4,2e3}{\J\per\kg\per\K} \). Vee küllastunud auru rõhu sõltuvus temperatuurist on toodud graafikul. Leidke, millise osa oma veest kaotab reservuaar purske jooksul.
 \end{question}
 \begin{question}[IPhO 1989, T1][ter4][7cm]
 	Vedelikud \( A \) ja \( B \) omavahel ei segune. Küllastunud auru rõhk \( p_i (i = A, B) \) nende kohal vastab piisava täpsusega valemile \( ln(p_i/p_0) = a_i/T + b_i \), kus \( p_0 \) on atmosfääri normaalrõhk, \( T \) on auru absoluutne temperatuur ning \( a_i \) ja \( b_i \) on vedeliku omadustest sõltuvad konstandid. Suhte \( p_i/p_0, i = A, B \) tegelikud väärtused temperatuuride \SI{40}{\degreeCelsius} ja \SI{90}{\degreeCelsius} jaoks on esitatud tabelis.
@@ -180,11 +180,11 @@ Kahe vedeliku piirpinnal algab keemine märksa madalamal temperatuuril, kui kumm
 		\vspace{-1em}
 		\centering
 		\begin{tabular}{ccc}
-			\( T(\si{\degreeCelsius}) \) & \( p_A/p_0 \) & \( p_B/p_0 \) \\ 
-			\num{40} & \num{0,284} & \num{0,07278} \\ 
-			\num{90} & \num{1,476} & \num{0,6918} \\ 
+			\( T(\si{\degreeCelsius}) \) & \( p_A/p_0 \) & \( p_B/p_0 \) \\
+			\num{40} & \num{0,284} & \num{0,07278} \\
+			\num{90} & \num{1,476} & \num{0,6918} \\
 		\end{tabular}
-		\vspace{-1em} 
+		\vspace{-1em}
 	\end{table}
 	\begin{subquestion}
 		\item Leidke vedelike \( A \) ja \( B \) keemistemperatuurid.
@@ -230,7 +230,7 @@ Pindpinevusülesannetes figureerivadki sageli kiled (sh seebimullid). Sellisel j
 \begin{question}[200MPPP, P67][ter6][\columnwidth]
 	Süüa tehes võib märgata, et viiner lõheneb keetmisel. See toimub alati \enquote{pikkupidi}, mitte kunagi aga \enquote{ristipidi}. Mis on selle põhjus? Kui oleks võimalik luua toroidikujuline viiner, siis kust ja millises suunas see lõheneks. Eeldage mõlemal juhul, et viinerinahk on homogeenne.
 \end{question}
-	
+
 \section{Ülesandeid}
 
 \begin{question}
@@ -246,6 +246,6 @@ Tundmatut päritolu allveelaev sõidab Läänemere põhja lähedal sügavusel \(
 \end{question}
 \begin{question}[EuPhO 2017, T2]
 	Õhuke ketas massiga \( M \) ja pindalaga \( S \) temperatuuril \( T_1 \) on alguses paigal kaalutus olekus gaasis massitihedusega \( \rho \) temperatuuriga \( T_0 \) \(T_1=1000T_0\). Üks ketta külg on kaetud termaalselt isoleeritud kihiga, teisel küljel on on väga hea termaalne kontakt seda ümbritseva gaasiga: gaasi molekulid massiga \( m \) omandavad ketta temperatuuri ühe põrkega ketta pinnalt. Hinnake ketta algset kiirendust \( a_0 \) ja maksimaalset kiirust \( v_{max} \) järgneva liikumise jooksul. Eeldage, et ketta soojusmahtuvus suurusjärk on \( Nk_B \), kus \( N \) on selles olevate aatomite arv ja \( k_B \) on Boltzmanni konstant, ja gaasi molekulide ja ketta materjali molaarmassid on samas suurusjärgus. Molekulide keskmine vaba tee pikkus on palju suurem ketta mõõtmetest. Ärge arvestage ääreefektidega, mis tulenevad ketta äärest.
-\end{question} 
+\end{question}
 
 \end{document}
