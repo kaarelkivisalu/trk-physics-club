@@ -1,0 +1,43 @@
+\documentclass[a4paper,11pt,twocolumn]{article}
+\input{structure.tex}
+\newcommand*\conj[1]{\bar{#1}}
+
+\begin{document}
+{\huge \textbf{Elektriahelad kondensaatorite ja poolidega}\hfill \normalsize{nr 8}} \\
+{Kaarel Kivisalu \hfill 20. märts 2019}
+
+\section{Kompleksarvud}
+Kompleksarvudest võib mõelda kui kahedimensionaalsetest vektoritest: kompleksarvu \(z = x + iy\) reaalosa defineerib vektori \(x\)-koordinaadi ja imaginaarosa defineerib \(y\)-koordinaadi. Kompleksarvude ja vektorite erinevs seisneb selles, et kahte kompleksarvu saab omavahel korrutada saades tulemuseks ikka kompleksarvu (vektoreid saab ka omavahel korrutades, kuid tulemuseks on vektor, mis on risti algsete vektoritega). Selle tõttu saab ka kompleksarve omavahel jagada, kui jagaja pole \num{0} (kahte mitteparaleelset vektorit ei saa omavahel jagada).
+
+Kompleksarvu moodul on defineeritud kui vastava vektori pikkus, \(|z|=\sqrt{x^2+y^2}\). Pidades silmas geomeetrilist (vektoriaalset) esitust ja kasutades Euleri valemit saame kirjutada, et
+\[z=|z|(\cos \alpha + i \sin \alpha)=|z|e^{i\alpha},\]
+kus \(\alpha\) on nurk vektori ja \(x\)-telje vahel; seda kutsutakse kompleksarvu eksponentsiaalkujuks, ja nurka \(\alpha\) kutsutakse kompleksarvu argumendiks (arg). Nähtavasti,
+\[\alpha = \arctan y/x=\arctan \Im(z)/\Re(z).\]
+Kahe kompleksarvu korrutis avaldub kujul
+\[z_1 \cdot z_2 = |z_1|e^{i\alpha_1}|z_2|e^{i\alpha_2}=|z_1||z_2|e^{i(\alpha_1+\alpha_2)}.\]
+Siin on võrrandi parem pool kompleksarvu \(z_1 z_2\) eksponentsiaalkuju, mis tähendab, et
+\[|z_1 z_2| = |z_1||z_2|\]
+ja
+\[\arg z_1z_2=\arg z_1 + \arg z_2.\]
+Sarnaselt ka \(|z_1/z_2|=|z_1|/|z_2|\) ja \(\arg z_1/z_2=\arg z_1-\arg z_2\).
+
+Siin on nimekiri vahel kasulikest valemitest:
+\[\Re{z}=\frac{1}{2}(z+\conj{z}),\]
+kus \(\conj{z}=x-iy\) kutsutakse \(z\) kaaskompleksarvuks;
+\[|z|^2=z\conj{z}.\]
+Märkame, et \(\conj{z}\) on vektoriaalselt sümmeetriline \(z\)-ga \(x\)-telje suhtes, järelikult
+\[\conj{e^{i\alpha}}=e^{-i\alpha};\]
+eelkõige, rakendades neid valemeid \(z=e^{i\alpha}\) jaoks saame, et
+\[\cos \alpha = \frac{e^{i\alpha}+ e^{-i\alpha}}{2},\ \sin \alpha = \frac{e^{i\alpha}-e^{-i\alpha}}{2i}.\]
+Kui on vaja saada lahti kompleksarvust murru nimetajas, siis saab kasutada võrdust
+\[\frac{z_1}{z_2}=\frac{z_1 \conj{z_2}}{|z_2|^2}.\]
+
+\section{Elektriahelad kondensaatorite ja poolidega}
+\subsection{Kondensaatorid}
+Kondensaatoritest võib mõelda koosnevat kahest juhtivast lehest (plaadist), mis on üksteisele väga lähedal ja eraldatud omavahel õhukese dielektrilise (insuleeriva) kihiga. Kui tavaliselt on laeng juhtmetel tühine, kuna mittetühine laeng tekitaks suure elektrivälja ja seega ka pinge. Siiski, olukord on erinev kui on kaks paraleelset juhtivat plaati: kui nendel plaatidel on võrdsed ja vastasmärgilised laengud, nii et kogu süsteem on elektriliselt neutraalne, suur elektriväli jääb plaatide vahele, järelikult on pinge mõõdukas. Tüüpiliselt on pinge plaatide vahel võrdeline laenguga ühel plaadil. Kuna kondensaator on summaarselt elektriliselt neutraalne, siis Kirchhoffi vooluseadus kehtib ka kondensaatorite puhul: vool ühele plaadile (suurendades sealset laengut) on võrdne teiselt plaadilt eemalduva vooluga
+
+
+\section{Vahelduvvool}
+
+<++>
+\end{document}
