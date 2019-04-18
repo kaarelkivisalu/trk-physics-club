@@ -1,20 +1,26 @@
 \documentclass[a4paper,11pt,twocolumn]{article}
 \input{structure.tex}
-\newcommand*\conj[1]{\bar{#1}}
+\newcommand*\conj[1]{\overline{#1}}
+\newcommand*\iu{\mathrm{i}}
+\usepackage{pgfplots}
+\pgfplotsset{width=5cm,compat=newest}
 
 \begin{document}
-{\huge \textbf{Elektriahelad kondensaatorite ja poolidega}\hfill \normalsize{nr 8}} \\
-{Kaarel Kivisalu \hfill 20. märts 2019}
+{\huge \textbf{Vahelduvvool}\hfill \normalsize{nr 10}} \\
+{Kaarel Kivisalu \hfill 16. aprill 2019}
 
 \section{Kompleksarvud}
-Kompleksarvudest võib mõelda kui kahedimensionaalsetest vektoritest: kompleksarvu \(z = x + iy\) reaalosa defineerib vektori \(x\)-koordinaadi ja imaginaarosa defineerib \(y\)-koordinaadi. Kompleksarvude ja vektorite erinevs seisneb selles, et kahte kompleksarvu saab omavahel korrutada saades tulemuseks ikka kompleksarvu (vektoreid saab ka omavahel korrutades, kuid tulemuseks on vektor, mis on risti algsete vektoritega). Selle tõttu saab ka kompleksarve omavahel jagada, kui jagaja pole \num{0} (kahte mitteparaleelset vektorit ei saa omavahel jagada).
+Selleks, et saaks leida ruutjuurt negatiivsetest arvudest on defineeritud $\sqrt{-1} = \iu^2$. Arvu $\iu$ kutsutakse \textit{imaginaarühikuks} ja arvu $a\iu$ \textit{imaginaararvuks}.
+Tihti võib olla kasulik teada, et $\frac{1}{\iu }=-\iu$.
+
+Kompleksarvudest võib mõelda kui kahedimensionaalsetest vektoritest: kompleksarvu \(z = x + \iu y\) reaalosa defineerib vektori \(x\)-koordinaadi ja imaginaarosa defineerib \(y\)-koordinaadi. Kompleksarvude ja vektorite erinevs seisneb selles, et kahte kompleksarvu saab omavahel korrutada saades tulemuseks ikka kompleksarvu (vektoreid saab ka omavahel korrutades, kuid tulemuseks on vektor, mis on risti algsete vektoritega). Selle tõttu saab ka kompleksarve omavahel jagada, kui jagaja pole \num{0} (kahte mitteparaleelset vektorit ei saa omavahel jagada).
 
 Kompleksarvu moodul on defineeritud kui vastava vektori pikkus, \(|z|=\sqrt{x^2+y^2}\). Pidades silmas geomeetrilist (vektoriaalset) esitust ja kasutades Euleri valemit saame kirjutada, et
-\[z=|z|(\cos \alpha + i \sin \alpha)=|z|e^{i\alpha},\]
+\[z=|z|(\cos \alpha + \iu \sin \alpha)=|z|\mathrm{e}^{\iu\alpha},\]
 kus \(\alpha\) on nurk vektori ja \(x\)-telje vahel; seda kutsutakse kompleksarvu eksponentsiaalkujuks, ja nurka \(\alpha\) kutsutakse kompleksarvu argumendiks (arg). Nähtavasti,
 \[\alpha = \arctan y/x=\arctan \Im(z)/\Re(z).\]
 Kahe kompleksarvu korrutis avaldub kujul
-\[z_1 \cdot z_2 = |z_1|e^{i\alpha_1}|z_2|e^{i\alpha_2}=|z_1||z_2|e^{i(\alpha_1+\alpha_2)}.\]
+\[z_1 \cdot z_2 = |z_1|\mathrm{e}^{\iu\alpha_1}|z_2|\mathrm{e}^{\iu\alpha_2}=|z_1||z_2|\mathrm{e}^{\iu(\alpha_1+\alpha_2)}.\]
 Siin on võrrandi parem pool kompleksarvu \(z_1 z_2\) eksponentsiaalkuju, mis tähendab, et
 \[|z_1 z_2| = |z_1||z_2|\]
 ja
@@ -23,21 +29,179 @@ Sarnaselt ka \(|z_1/z_2|=|z_1|/|z_2|\) ja \(\arg z_1/z_2=\arg z_1-\arg z_2\).
 
 Siin on nimekiri vahel kasulikest valemitest:
 \[\Re{z}=\frac{1}{2}(z+\conj{z}),\]
-kus \(\conj{z}=x-iy\) kutsutakse \(z\) kaaskompleksarvuks;
+kus \(\conj{z}=x-\iu y\) kutsutakse \(z\) kaaskompleksarvuks;
 \[|z|^2=z\conj{z}.\]
 Märkame, et \(\conj{z}\) on vektoriaalselt sümmeetriline \(z\)-ga \(x\)-telje suhtes, järelikult
-\[\conj{e^{i\alpha}}=e^{-i\alpha};\]
-eelkõige, rakendades neid valemeid \(z=e^{i\alpha}\) jaoks saame, et
-\[\cos \alpha = \frac{e^{i\alpha}+ e^{-i\alpha}}{2},\ \sin \alpha = \frac{e^{i\alpha}-e^{-i\alpha}}{2i}.\]
+\[\conj{\mathrm{e}^{\iu \alpha}}=\mathrm{e}^{-\iu \alpha};\]
+eelkõige, rakendades neid valemeid \(z=e^{\iu\alpha}\) jaoks saame, et
+\[\cos \alpha = \frac{\mathrm{e}^{\iu \alpha}+ \mathrm{e}^{-\iu \alpha}}{2},\ \sin \alpha = \frac{\mathrm{e}^{\iu \alpha}-\mathrm{e}^{-\iu \alpha}}{2\iu }.\]
 Kui on vaja saada lahti kompleksarvust murru nimetajas, siis saab kasutada võrdust
 \[\frac{z_1}{z_2}=\frac{z_1 \conj{z_2}}{|z_2|^2}.\]
 
 \section{Elektriahelad kondensaatorite ja poolidega}
 \subsection{Kondensaatorid}
-Kondensaatoritest võib mõelda koosnevat kahest juhtivast lehest (plaadist), mis on üksteisele väga lähedal ja eraldatud omavahel õhukese dielektrilise (insuleeriva) kihiga. Kui tavaliselt on laeng juhtmetel tühine, kuna mittetühine laeng tekitaks suure elektrivälja ja seega ka pinge. Siiski, olukord on erinev kui on kaks paraleelset juhtivat plaati: kui nendel plaatidel on võrdsed ja vastasmärgilised laengud, nii et kogu süsteem on elektriliselt neutraalne, suur elektriväli jääb plaatide vahele, järelikult on pinge mõõdukas. Tüüpiliselt on pinge plaatide vahel võrdeline laenguga ühel plaadil. Kuna kondensaator on summaarselt elektriliselt neutraalne, siis Kirchhoffi vooluseadus kehtib ka kondensaatorite puhul: vool ühele plaadile (suurendades sealset laengut) on võrdne teiselt plaadilt eemalduva vooluga
+Kondensaatoritest võib mõelda koosnevat kahest juhtivast lehest (plaadist), mis on üksteisele väga lähedal ja eraldatud omavahel õhukese dielektrilise (insuleeriva) kihiga.
+Kui tavaliselt on laeng juhtmetel tühine, kuna mittetühine laeng tekitaks suure elektrivälja ja seega ka pinge.
+Siiski, olukord on erinev kui on kaks paraleelset juhtivat plaati: kui nendel plaatidel on võrdsed ja vastasmärgilised laengud, nii et kogu süsteem on elektriliselt neutraalne, suur elektriväli jääb plaatide vahele, järelikult on pinge mõõdukas.
+Tüüpiliselt on pinge plaatide vahel võrdeline laenguga ühel plaadil.
+Kuna kondensaator on summaarselt elektriliselt neutraalne, siis Kirchhoffi vooluseadus kehtib ka kondensaatorite puhul: vool ühele plaadile (suurendades sealset laengut) on võrdne teiselt plaadilt eemalduva vooluga
 
+Mahtuvus on defineeritud kui
+\[
+C=\frac{q}{V}
+,\] kus $q$ on laheng ühel plaadil ja $V$ on plaatide vaheline pinge.
+
+Kondensaatoris salvestatud energia on
+\[
+W=\frac{CV^2}{2}
+.\]
+Vaatame kondensaatori laadimist. Kui laeng $\mathrm{d}q$ läbib potentsiaalide vahe $V$, siis tehakse elektriline töö $\mathrm{d}A=VI\,\mathrm{d}t=V\,\mathrm{d}q$. Seega on kogu tehtud töö $A= \int_0^{q} V \, \mathrm{d}q=\int_0^{CV}V\, \mathrm{d}(CV)=C\int_0^{V} V \mathrm{d}V=\frac{CV^2}{2}$.
+
+Kondensaatori pinge ei saa muutuda hetkeliselt, kuna hetkelise laengumuutuse jaoks oleks vaja lõputu suurt voolutugevust; pinge muutumise karakteristlik aeg on
+\[
+\tau =CR
+,\] kus $R$ on kondensaatoriga ühendatud vooluahela takistus.
+Tõepoolest, vaatame kondensaatorit pingega $V$, mis on ühendatud takistusega $R$. Kirchoffi seadustest $R \frac{\mathrm{d}q}{\mathrm{d}t} + \frac{q}{C}=0$, järelikult
+\[
+\frac{\mathrm{d} q}{q}=-\frac{\mathrm{d} t}{C R} \Rightarrow \ln q-\ln q_{0}=-\frac{t}{C R} \Rightarrow q=q_{0} \mathrm{e}^{-\frac{t}{\tau}}
+.\]
+
+\subsection{Induktorid}
+Elektrivool tekitab magnetvälja, mis omakorda tekitab magnetvoo, mis läbib elektriahelat.
+Tavaliselt on magnetvoog niivõrd väike, et selle tekitatud elektromotoorjõud on tühine.
+Selleks, et tekitada suuremat magnetvoogu kasutatakse mähiseid.
+Kattuvate juhtmete arvu $N$ suurendamisel on kahekordne efekt: esiteks, vooluahelat läbiv vool on endaga $N$ korda paraleelne, mis tõstab magnetvälja $N$ korda; teiseks, magnetväli läbib vooluahelat $N$ korda, mis suurendab jällegi magnetvoogu $N$ korda.
+
+Induktori induktiivsus on defineeritud kui
+\[
+L=\frac{\Phi}{I}
+,\] kus $I$ on induktorit läbiv voolutugevus ja $\Phi$ on magnetvoog läbi induktori.
+Faraday induktsiooniseadusest $\mathcal{E}= -\frac{\mathrm{d}\Phi}{\mathrm{d}t}$ saame, et
+\[
+\mathcal{E}=-L \frac{\mathrm{d}I}{\mathrm{d}t}
+.\]
+
+Induktoris salvestatud energia on
+\[
+W=\frac{LI^2}{2}
+.\]
+Vaatame elektrilist tööd induktorisse voolu tekitamiseks: $A=\int_0^{q}\mathcal{E}\, \mathrm{d}q=\int_0^{t} \mathcal{E} I \, \mathrm{d}t=\int_0^{I}L \frac{\mathrm{d}I}{\mathrm{d}t} I \, \mathrm{d}t = L \int_0^{I}I \, \mathrm{d}I=\frac{LI^2}{2}$.
+
+Voolutugevus induktoris ei saa muutuda hetkeliselt, kuna see tekitaks lõpmatu elektromotoorjõu; voolutugevuse muutumise karakteristlik aeg on
+\[
+\tau=\frac{L}{R}
+.\] kus $R$ on induktoriga ühendatud vooluahela takistus.
+Tõepoolest, vaatame induktorit voolutugevusega $I$, mis on ühendatud takistusega $R$. Kirchoffi seadustest $RI+L \frac{\mathrm{d}I}{\mathrm{d}t}=0$, järelikult
+\[
+    \frac{\mathrm{d} I}{I}=-\frac{R \mathrm{d} t}{L} \Rightarrow \ln I-\ln I_{0}=-\frac{R t}{L} \Rightarrow I=I_{0} \mathrm{e}^{-\frac{t}{\tau}}
+.\]
+
+\section{Ülesanded}
+\begin{question}
+    Kondensaatorit mahtuvusega $C$ laetakse kasutades patareid, mille elektromotoorjõud on $\mathcal{E}$. Leidke laadumise käigus eralduv soojushulk.
+\end{question}
+
+\begin{question}
+    Näidake, et kondensaatoride jadaühenduse mahtuvus avaldub valemiga $C=(C_1^{-1} + C_2^{-1} + \ldots + C_n^{-1})^{-1}$ ja rööpühenduse mahtuvus valemiga $C=C_1+C_2+\ldots + C_n$.
+\end{question}
+
+\begin{question}
+    Näidake, et induktorite jadaühenduse induktiivsus avaldub valemiga $L=L_1+L_2+\ldots+L_n$ ja rööpühenduse induktiivsus valemiga $L=(L_1^{-1}+L_2^{-1}+\ldots+ L_n^{-1}$.
+\end{question}
+
+\begin{question}[NBPhO 2017, P3][vv1][2.9cm]
+    Elektriahelas on patarei, lüliti, takistid ja kondensaatorid nagu skeemil näidatud. Kõikide takistite takistus on $R$, kõikide kondensaatorite mahtuvus on $C$ ja patarei pinge on $U$. Punkt $A$ on maandatud ja potentsiaal selles punktis on seega \SI{0}{V}. Alguses on lüliti avatud ja ühelgi kondensaatoril pole laengut.
+    \begin{subquestion}
+    \item Mis on potentsiaal punktides $B$ ja $C$ pärast seda, kui oleme lüliti sulgenud ja oodanud, kuni kõik potentsiaalid stabiliseeruvad?
+    \item  Mis on potentsiaal punktis $D$ pärast seda, kui oleme lüliti sulgenud ja oodanud, kuni kõik potentsiaalid stabiliseeruvad?
+    \end{subquestion}
+\end{question}
+
+\begin{question}
+    Tunneldiood on ühendatud jadamisi takistiga takistusega $R$ ja patareiga (tüüpilise $V - I$ tunnusjoone jaoks vaata joonist). Olgu süsteemi parameetrid sellised, et leidub statsionaarolek, kus dioodi diferentsiaaltakistus $R_{\mathrm{diff}} \equiv \frac{\mathrm{d}V}{\mathrm{d}I}$ on negatiivne. Millistel tingimustel on see olek stabiilne.
+\end{question}
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            axis lines=center,
+            ylabel = $I$,
+            xlabel = $V$,
+            ticks=none,
+            ylabel style={left},
+            xlabel style={below},
+        ]
+        \addplot[domain=0:0.38, samples=100,]{2550*x^3 - 1455*x^2 + 220*x};
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}
+
+\begin{question}[vv2][4cm]
+    Kondensaator mahtuvusega $C$ on laetud pingeni $V_0$. Kondensaator tühjendatakse jadaühendusel dioodi ja takistiga $R$. Eeldage, et järgnev graafik vastab heas lähenduses dioodi $V-I$ tunnusjoonele ja et kondensaator tühjendatakse pingeni $V_d$. Leidke takistil eralduv soojushulk.
+\end{question}
+
+%\begin{figure}[h!]
+%    \centering
+%    \begin{tikzpicture}
+%        \begin{axis}[
+%            xmin=-0.1, xmax=1.5,
+%            ymin=-0.1, ymax=1.5,
+%            axis lines=center,
+%            ylabel = $I$,
+%            ylabel style={left},
+%%            xlabel = $V$,
+%%            xlabel style={at = {(ticklabel* cs: 1)}, },
+%            ytick=\empty,
+%            xtick={1,1.5},
+%            xticklabels={$V_d$, $V$},
+%            xtick style={line width=0mm},
+%        ]
+%        \addplot[thick,domain=-0.1:1]{0};
+%        \addplot[thick] coordinates{(1,0) (1,5)};
+%        \end{axis}
+%    \end{tikzpicture}
+%\end{figure}
+
+\begin{question}
+    Kondensaator laetakse ühendades see jadaühenduses patareiga eletromotoorjõuga $\mathcal{E}$, induktoriga induktiivsusega $L$ ja dioodiga. Dioodi $V-I$ tunnusjoone jaoks vaadake eelmise ülesande juures olnud graafikut; patarei sisetakistus on tühine. Millise pingeni laetakse kondensaator eeldusel, et $\mathcal{E}>V_d$.
+\end{question}
+
+\begin{question}[vv3][5cm]
+    Vaatame allolevat skeemi: algselt laenguta kondensaatorid $C_1$ ja $C_2$ ühendatakse patareiga ja mingil hetkel lüliti $K$ suletakse. Pärast seda hetke hakkavad pinge ja voolutugevus võnkuma. Leidke nende võnkumiste jaoks maksimaalne voolutugevus $I_{\mathrm{max}}$ läbi induktori ja maksimaalne pinge $V_{\mathrm{max}}$ kondensaatoril $C_1$.
+\end{question}
+
+\begin{question}
+    Eelneva ülesande eelduste juures skitseerige kondensaatoril $C_1$ oleva pinge funktsioonina ajast.
+\end{question}
+
+\begin{question}[vv4][6cm]
+    Allolev skeem võimaldab laadida taaslaetavat patareid pingega $\mathcal{E}=\SI{12}{V}$ kasutades alalisvooluallikat, mille pinge $V_0=\SI{5}{V}$ on madalam kui $\mathcal{E}$. Selleks avatakse ja suletakse lüliti $K$ perioodiliselt: avatud ja suletud perioodid on võrdse kestvusega $\tau=\SI{10}{ms}$. leidge keskmine laadimisvoolu tugevus eeldusel, et $L=\SI{1}{H}$. Dioodi võib lugeda ideaalseks ja induktori oomilise takistusega pole vaja arvestada.
+\end{question}
+
+\begin{question}[vv5][6cm]
+    Alloleval skeemil on lüliti $K$ hoitud avatult; mingil ajahetkel see suletakse.
+    \begin{subquestion}
+    \item Milline on ampermeetri näit kohe pärast lüliti sulgemist?
+    \item Lüliti hoitakse suletud kuni tekib tasakaaluolek; milline on nüüd ampermeetri näit?
+    \item Nüüd avatakse lüliti uuesti; milline on ampermeetri näit vahetult pärast taasavamist?
+    \end{subquestion}
+\end{question}
+
+\begin{question}[vv6][6cm]
+    Kondensaator mahtuvusega $C$ ja takisti takistusega $R$ on ühendatud rööbiti, ristkülikukujuline vool pulseerub (vt joonist) süsteemi klemmidel. Eeldusel, et $I_2=+I_1$ ja et ajahetkel $t=0$ kondensaatori polnud laetud, skitseerige pinge kondensaatoril funktsioonina ajast, kui
+    \begin{subquestion}
+    \item $T\gg RC$
+    \item $T\ll RC$.
+    \end{subquestion}
+    \vspace{-1em}
+    Nüüd eeldame, et perioodilist voolu on rakendatud väga pikka aega ($t\gg RC$) ja ärme enam kasuta eeldust $I_2-I_1$. Leidke keskmine pinge ja pinge võnkumiste amplituud, kui
+    \begin{subquestion}%[resume]
+    \item $T\gg RC$
+    \item $T\ll RC$.
+    \end{subquestion}
+\end{question}
 
 \section{Vahelduvvool}
 
-<++>
+
 \end{document}
