@@ -106,7 +106,7 @@ Tõepoolest, vaatame induktorit voolutugevusega $I$, mis on ühendatud takistuse
 \end{question}
 
 \begin{question}
-    Näidake, et induktorite jadaühenduse induktiivsus avaldub valemiga $L=L_1+L_2+\ldots+L_n$ ja rööpühenduse induktiivsus valemiga $L=(L_1^{-1}+L_2^{-1}+\ldots+ L_n^{-1}$.
+    Näidake, et induktorite jadaühenduse induktiivsus avaldub valemiga $L=L_1+L_2+\ldots+L_n$ ja rööpühenduse induktiivsus valemiga $L=(L_1^{-1}+L_2^{-1}+\ldots+ L_n^{-1})^{-1}$.
 \end{question}
 
 \begin{question}[NBPhO 2017, P3][vv1][2.9cm]
@@ -195,13 +195,62 @@ Tõepoolest, vaatame induktorit voolutugevusega $I$, mis on ühendatud takistuse
     \end{subquestion}
     \vspace{-1em}
     Nüüd eeldame, et perioodilist voolu on rakendatud väga pikka aega ($t\gg RC$) ja ärme enam kasuta eeldust $I_2-I_1$. Leidke keskmine pinge ja pinge võnkumiste amplituud, kui
-    \begin{subquestion}%[resume]
+    \begin{subquestion}
     \item $T\gg RC$
     \item $T\ll RC$.
     \end{subquestion}
 \end{question}
 
 \section{Vahelduvvool}
+Eeldame, et vahelduvvool (AC) ja pinge on sinusoidaalsed, st $I(t)=I_0 \sin(\omega t + \phi)$ ja $V(t)=V_0 \sin(\omega t + \phi)$.
+Kirchhoffi seadused on lineaarsed, seega kuni vooluringi elemendid on lineaarsed, siis Kirchhoffi seaduste kasutamine tähendab pingete ja voolude lineaarsete kombinatsioonide kasutamist.
+Siinus ja koosinus pole väga mugavad funktsioonid liitmiseks, eriti kui eri liikmetel on erinevad faasinihked $\phi$.
+Õnneks kasutades Euleri valemit saab siinuse ja koosinuse asendada eksponentsiaalfunktsiooniga, kui minna üle reaalarvudelt kompleksarvudele:
+\[
+    \mathrm{e}^{\iu(\omega t + \phi)}=\cos(\omega t + \phi) + \iu \sin(\omega t + \phi)
+.\]
+Seega siinuse ja koosinuse asemel me kirjutame $I=I_0 \mathrm{e}^{\iu (\omega t + \phi)}$.
+Pole vaja muretseda selle pärast, et füüsilisi suurusi mõõdetakse tavaliselt reaalarvudes ja nüüd on äkitselt kompleksarvulised voolud (ja pinged): voolud jäävad reaalarvulisteks, peame lihtsalt meeles pidama, et tegelikult on meil kompleksarvu reaalosa.
+Ehk, kui me kirjutame $I=I_0 \mathrm{e}^{\iu (\omega t + \phi)}$, siis me eeldame, et füüsiliselt mõõdetav voolutugevus on $I_r=\Re I_0 \mathrm{e}^{\iu (\omega t + \phi)}=I_0 \sin(\omega t + \phi)$.
 
 
+Ahelas eralduv võimsus pole lineaarne funktsioon pingest ja voolutugevusest, seega tuleb olla hoolikas.
+Olgu $I=I_0 \mathrm{e}^{\iu \phi}$ ja $V=V_0  \mathrm{e}^{\iu \phi}$ voolutugevuse ja pinge kompleksamplituudid.
+Siis
+\[
+    P=\left< \Re I \mathrm{e}^{\iu \omega t} \Re V \mathrm{e}^{\iu \omega t} \right> = \left<\frac{I \mathrm{e}^{\iu \omega t} + \overline{I}\mathrm{e}^{-\iu \omega t}}{2} \cdot \frac{V \mathrm{e}^{\iu \omega t} + \overline{V}\mathrm{e}^{-\iu \omega t}}{2} \right>
+.\]
+Avades sulud ja kasutades fakti $\left< \mathrm{e}^{2 \iu \omega t} \right> = \left<\mathrm{e}^{-2 \iu \omega t} \right> =0$ saame, et
+\[
+    P=\frac{I \overline{V}+V\overline{I}}{4}=|I| |V| \frac{\mathrm{e}^{\iu \phi_1}\mathrm{e}^{-\iu \phi_2} + \mathrm{e}^{-\iu\phi_1}\mathrm{e}^{\iu \phi_2}}{4}
+;\]
+kasutades valemit $\cos x=\frac{1}{2}\left( \mathrm{e}^{\iu x}+ \mathrm{e}^{-\iu x} \right) $, saame, et
+\[
+    P=\frac{1}{2}|I| |V| \cos(\phi_1-\phi_2)
+.\]
+
+Selleks, et saada lahtu tegurist $\frac{1}{2}$, amplituudid asendatakse tihti ruutkeskmiste (rms) amplituudidega:
+\[
+    \tilde{I}=\sqrt{\left< I^2 \right>} =\sqrt{\frac{1}{T} \int_T I(t)^2 \, \mathrm{d}t} = \frac{I}{\sqrt{2}}
+\] ja
+\[
+    \tilde{V}=\sqrt{\left< V^2 \right>} =\sqrt{\frac{1}{T} \int_T V(t)^2 \, \mathrm{d}t} = \frac{V}{\sqrt{2}}
+.\]
+
+Pinge induktoril $U=L \frac{\mathrm{d}I}{\mathrm{d}t}$.
+Asendades sinna $I=I_0 \mathrm{e}^{\iu \omega t}$ saame, et $V=\iu \omega L I_0 \mathrm{e}^{\iu \omega t}$. Eksponendi prefaktor on siin induktori pinge kompleksamplituud $U_0=\iu \omega L I_0$; tähistades
+\[
+Z_L=\iu \omega L
+\]
+saame kirjutada viimase võrrandi kui $V_0=Z_L I_0$; siin $Z_L$ on impedents. Seega kompleksamplituudide jaoks on induktori pinge ja voolutugevus seotud Ohmi seadusega samamoodi nagu alalisvoolu korral (DC) -- ainult takistuse asemel tuleb kasutada impedentsi.
+Sarnaselt kondensaatori jaoks $V=\frac{q}{C}=\frac{1}{C} \int I \, \mathrm{d}t=\frac{1}{C} \int I_0 \mathrm{e}^{\iu \omega t} \, \mathrm{d}t=\frac{I_0 \mathrm{e}^{\iu \omega t}}{\iu \omega C}$, st, et $V_0=Z_C I_0$, kus
+\[
+Z_C=\frac{1}{\iu \omega C}
+.\]
+Lõpuks, takisti joaks Ohmi seadus $V=IR=I_0 R \mathrm{e}^{\iu \omega t}$, järelikult $V_0=Z_R I_0$, kus
+\[
+Z_R=R
+.\]
+
+AC ahelates on võimalik kasutada kõiki samu meetodeid nagu DC ahelates, kui arvutusi tehakse kompleksamplituuditega ja impedentsi kasutatakse takistuse asemel. Pinge ja voolutugevuse kompleksamplituudide jaoks $V=Z I$, kus $Z$ on vooluahela koguimpedents; faasinihe pinge ja voolutugevuse vahel on $\phi=\arg Z=\frac{\Re Z}{\Im Z}$.
 \end{document}
