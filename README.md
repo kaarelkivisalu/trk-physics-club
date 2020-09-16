@@ -1,4 +1,7 @@
 # trk-physics-club
+
+https://kaarelkivisalu.github.io/trk-physics-club/
+
 Tallinna Reaalkooli füüsikaklubi materjalid
 
 Suur osa materjalidest ja ülesannetest pärinevad lehekülgedelt
