@@ -18,6 +18,8 @@ Tallinna Reaalkooli füüsikaklubi materjalid
 | [Taevamehaanika](https://github.com/kaarelkivisalu/trk-physics-club/raw/master/9-taevamehaanika.pdf)||
 | [Vahelduvvool](https://github.com/kaarelkivisalu/trk-physics-club/raw/master/10-vahelduvvool.pdf)||
 
+[Lahendused](https://github.com/kaarelkivisalu/trk-physics-club/raw/master/lahendused.pdf)
+
 Suur osa materjalidest ja ülesannetest pärinevad lehekülgedelt:
 
 [EFO koduleht](http://efo.fyysika.ee/)
